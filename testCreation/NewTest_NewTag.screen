@@ -29,9 +29,6 @@
     </widgets>
     <widgets xsi:type="model:Arrow" id="216" x="112" y="16" width="8" height="10" measuredWidth="8" measuredHeight="10" left="false" right="true"/>
   </widgets>
-  <widgets xsi:type="model:Button" id="220" x="696" y="120" height="40" text="Uložit test" measuredWidth="87" measuredHeight="40" link="NewTest_Saved.screen">
-    <font/>
-  </widgets>
   <widgets xsi:type="model:Button" id="221" x="798" y="120" height="40" text="Můj účet" measuredWidth="77" measuredHeight="40" link="../homepage/MyAccount.screen">
     <font/>
   </widgets>
@@ -45,6 +42,12 @@
     <font/>
   </widgets>
   <widgets xsi:type="model:Button" id="233" x="208" y="169" width="49" text="FEL  x" measuredWidth="49" measuredHeight="30" link="NewTest.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="234" x="696" y="120" height="40" text="Uložit nyní" measuredWidth="90" measuredHeight="40" link="NewTest_Saved.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="235" x="104" y="568" width="217" text="Uložit a dokončit nový test" measuredWidth="217" measuredHeight="30" link="../homepage/MyTests.screen">
     <font/>
   </widgets>
   <hRuler/>

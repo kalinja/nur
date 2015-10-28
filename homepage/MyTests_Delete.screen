@@ -3,7 +3,7 @@
   <widgets xsi:type="model:Browser" id="1" x="47" y="48" width="857" height="577" text="Browser&#xA;http://selftest.cz" measuredWidth="857" measuredHeight="577">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Placeholder" id="2" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79"/>
+  <widgets xsi:type="model:Placeholder" id="2" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79" link="Homepage.screen"/>
   <widgets xsi:type="model:Button" id="3" x="672" y="120" width="99" height="40" text="Vytvořit test" measuredWidth="99" measuredHeight="40" link="../testCreation/NewTest.screen">
     <font/>
   </widgets>
@@ -12,6 +12,9 @@
   </widgets>
   <widgets xsi:type="model:SearchField" id="5" x="208" y="120" width="457" text="Vyhledat" measuredWidth="457" measuredHeight="40">
     <font size="24px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="6" x="208" y="168" width="33" text="FIT" measuredWidth="33" measuredHeight="23" textAlignment="Center">
+    <font/>
   </widgets>
   <widgets xsi:type="model:TextField" id="7" x="424" y="168" text="FEL" measuredWidth="29" measuredHeight="23" textAlignment="Center">
     <font/>
@@ -53,7 +56,7 @@
   <widgets xsi:type="model:Shape" id="20" x="800" y="424" width="37" height="33" measuredWidth="37" measuredHeight="33" shapeType="triangle">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="21" x="608" y="579" width="229" text="Spustit" measuredWidth="229" measuredHeight="25" link="../test/Test.screen">
+  <widgets xsi:type="model:Button" id="21" x="608" y="579" width="229" text="Spustit" measuredWidth="229" measuredHeight="25">
     <font/>
   </widgets>
   <widgets xsi:type="model:TextField" id="22" x="536" y="168" width="73" text="BIOLOGIE" measuredWidth="73" measuredHeight="23" textAlignment="Center">
@@ -79,10 +82,43 @@
     <widgets xsi:type="model:Icon" id="37" x="195" measuredWidth="32" measuredHeight="32" icon="thumbs-up (large)"/>
     <widgets xsi:type="model:Icon" id="38" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
   </widgets>
-  <widgets xsi:type="model:TextArea" id="39" x="608" y="476" width="229" height="93" text="Počet otázek: 42&#xD;&#xA;Obtížnost: Velmi těžká" measuredWidth="229" measuredHeight="93">
+  <widgets xsi:type="model:TextArea" id="39" x="608" y="476" width="229" height="93" text="Počet otázek: 42&#xD;&#xA;Obtížnost: Velmi těžká&#xD;&#xA;Dostupnost: Veřejný s heslem" measuredWidth="229" measuredHeight="93">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="40" x="208" y="167" text="FIT" measuredWidth="36" measuredHeight="25" link="TagSearch.screen">
+  <widgets xsi:type="model:Button" id="42" x="496" y="260" text="Smazat" measuredWidth="58" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="43" x="424" y="260" text="Editovat" measuredWidth="63" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="44" x="496" y="317" text="Smazat" measuredWidth="58" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="45" x="424" y="317" text="Editovat" measuredWidth="63" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="46" x="496" y="373" text="Smazat" measuredWidth="58" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="47" x="424" y="373" text="Editovat" measuredWidth="63" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="48" x="496" y="432" text="Smazat" measuredWidth="58" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="49" x="424" y="432" text="Editovat" measuredWidth="63" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="51" x="47" y="102" width="857" height="523" measuredWidth="857" measuredHeight="523" alpha="188"/>
+  <widgets xsi:type="model:Alert" id="50" x="339" y="305" text="Alert&#xA;Opravdu chcete smazat tento test?&#xA;OK,Cancel" measuredWidth="270" measuredHeight="132" icon="warning (large)">
+    <items x="80" y="93" width="80" height="24" text="OK"/>
+    <items x="175" y="93" width="80" height="24" text="Cancel"/>
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="52" x="416" y="397" width="89" height="29" text="OK" measuredWidth="89" measuredHeight="29" link="MyTests.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="53" x="512" y="397" width="89" height="29" text="Cancel" measuredWidth="89" measuredHeight="29" link="MyTests.screen">
     <font/>
   </widgets>
   <hRuler/>

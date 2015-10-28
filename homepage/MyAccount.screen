@@ -3,7 +3,7 @@
   <widgets xsi:type="model:Browser" id="1" x="47" y="48" width="857" height="577" text="Browser&#xA;http://selftest.cz" measuredWidth="857" measuredHeight="577">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Placeholder" id="2" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79"/>
+  <widgets xsi:type="model:Placeholder" id="2" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79" link="Homepage.screen"/>
   <widgets xsi:type="model:Button" id="3" x="672" y="120" width="99" height="40" text="Vytvořit test" measuredWidth="99" measuredHeight="40" link="../testCreation/NewTest.screen">
     <font/>
   </widgets>
@@ -12,9 +12,6 @@
   </widgets>
   <widgets xsi:type="model:SearchField" id="5" x="208" y="120" width="457" text="Vyhledat" measuredWidth="457" measuredHeight="40">
     <font size="24px"/>
-  </widgets>
-  <widgets xsi:type="model:TextField" id="6" x="208" y="168" width="33" text="FIT" measuredWidth="33" measuredHeight="23" textAlignment="Center">
-    <font/>
   </widgets>
   <widgets xsi:type="model:TextField" id="7" x="424" y="168" text="FEL" measuredWidth="29" measuredHeight="23" textAlignment="Center">
     <font/>
@@ -89,15 +86,18 @@
     <widgets xsi:type="model:Tooltip" id="42" width="142" height="153" text="Pepa Novák" measuredWidth="142" measuredHeight="153" position="topRight">
       <font/>
     </widgets>
-    <widgets xsi:type="model:Button" id="43" y="44" width="142" height="37" text="Historie" measuredWidth="142" measuredHeight="37">
+    <widgets xsi:type="model:Button" id="43" y="44" width="142" height="37" text="Historie" measuredWidth="142" measuredHeight="37" link="../history/History.screen">
       <font/>
     </widgets>
-    <widgets xsi:type="model:Button" id="44" y="80" width="142" height="37" text="Odhlásit se" measuredWidth="142" measuredHeight="37">
+    <widgets xsi:type="model:Button" id="44" y="80" width="142" height="37" text="Moje testy" measuredWidth="142" measuredHeight="37" link="MyTests.screen">
       <font/>
     </widgets>
-    <widgets xsi:type="model:Button" id="47" y="116" width="142" height="37" text="Moje testy" measuredWidth="142" measuredHeight="37">
+    <widgets xsi:type="model:Button" id="47" y="116" width="142" height="37" text="Odhlásit se" measuredWidth="142" measuredHeight="37" link="Homepage.screen">
       <font/>
     </widgets>
+  </widgets>
+  <widgets xsi:type="model:Button" id="48" x="208" y="167" text="FIT" measuredWidth="36" measuredHeight="25" link="TagSearch.screen">
+    <font/>
   </widgets>
   <hRuler/>
   <vRuler/>

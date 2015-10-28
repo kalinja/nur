@@ -3,7 +3,7 @@
   <widgets xsi:type="model:Browser" id="1" x="47" y="48" width="857" height="577" text="Browser&#xA;http://selftest.cz" measuredWidth="857" measuredHeight="577">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="3" x="672" y="120" width="99" height="40" text="Vytvořit test" measuredWidth="99" measuredHeight="40">
+  <widgets xsi:type="model:Button" id="3" x="672" y="120" width="99" height="40" text="Vytvořit test" measuredWidth="99" measuredHeight="40" link="../testCreation/NewTest.screen">
     <font size="14px"/>
   </widgets>
   <widgets xsi:type="model:Button" id="4" x="782" y="120" width="75" height="40" text="Můj účet" measuredWidth="75" measuredHeight="40">
@@ -37,7 +37,7 @@
   <widgets xsi:type="model:Shape" id="20" x="800" y="416" width="37" height="33" measuredWidth="37" measuredHeight="33" shapeType="triangle">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="21" x="720" y="571" width="117" text="Spustit" measuredWidth="117" measuredHeight="25">
+  <widgets xsi:type="model:Button" id="21" x="720" y="571" width="117" text="Spustit" measuredWidth="117" measuredHeight="25" link="../testCreation/NewTest.screen">
     <font/>
   </widgets>
   <widgets xsi:type="model:Chart" id="40" x="112" y="477" width="489" height="119" measuredWidth="489" measuredHeight="119" chartType="line"/>
@@ -62,11 +62,11 @@
   <widgets xsi:type="model:TextArea" id="47" x="608" y="458" width="229" height="71" text="Počet spuštění: 25&#xD;&#xA;Maximální hodnocení: 100%&#xD;&#xA;Poslední hodnocení: 75%" measuredWidth="229" measuredHeight="71" borderColor="#ffffff" lineHeight="1.7">
     <font size="13px" bold="false"/>
   </widgets>
-  <widgets xsi:type="model:Placeholder" id="50" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79"/>
-  <widgets xsi:type="model:Button" id="51" x="672" y="168" width="185" height="31" text="Vymazat celou historii" measuredWidth="185" measuredHeight="31">
+  <widgets xsi:type="model:Placeholder" id="50" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79" link="../homepage/Homepage.screen"/>
+  <widgets xsi:type="model:Button" id="51" x="672" y="168" width="185" height="31" text="Vymazat celou historii" measuredWidth="185" measuredHeight="31" link="DeleteAll.screen">
     <font size="14px"/>
   </widgets>
-  <widgets xsi:type="model:Button" id="52" x="608" y="571" width="105" text="Vymazat" measuredWidth="105" measuredHeight="25">
+  <widgets xsi:type="model:Button" id="52" x="608" y="571" width="105" text="Vymazat" measuredWidth="105" measuredHeight="25" link="DeleteTest.screen">
     <font/>
   </widgets>
   <hRuler/>

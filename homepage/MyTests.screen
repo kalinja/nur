@@ -4,23 +4,29 @@
     <font/>
   </widgets>
   <widgets xsi:type="model:Placeholder" id="2" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79" link="Homepage.screen"/>
-  <widgets xsi:type="model:Button" id="4" x="688" y="120" width="161" height="40" text="Přihlásit" measuredWidth="161" measuredHeight="40" link="Login.screen">
+  <widgets xsi:type="model:Button" id="3" x="672" y="120" width="99" height="40" text="Vytvořit test" measuredWidth="99" measuredHeight="40" link="../testCreation/NewTest.screen">
     <font/>
   </widgets>
-  <widgets xsi:type="model:SearchField" id="5" x="208" y="120" width="473" measuredWidth="473" measuredHeight="40">
+  <widgets xsi:type="model:Button" id="4" x="782" y="120" height="40" text="Můj účet" measuredWidth="67" measuredHeight="40" link="MyAccount.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" id="5" x="208" y="120" width="457" text="Vyhledat" measuredWidth="457" measuredHeight="40">
     <font size="24px"/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="7" x="208" y="168" text="FEL" measuredWidth="29" measuredHeight="23" textAlignment="Center">
+  <widgets xsi:type="model:TextField" id="6" x="208" y="168" width="33" text="FIT" measuredWidth="33" measuredHeight="23" textAlignment="Center">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="8" x="248" y="168" width="65" text="DĚJEPIS" measuredWidth="65" measuredHeight="23" textAlignment="Center">
+  <widgets xsi:type="model:TextField" id="7" x="424" y="168" text="FEL" measuredWidth="29" measuredHeight="23" textAlignment="Center">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="9" x="272" y="129" width="57" text="CVUT" measuredWidth="57" measuredHeight="21" textAlignment="Center">
-    <font size="11px"/>
+  <widgets xsi:type="model:TextField" id="8" x="464" y="168" width="65" text="DĚJEPIS" measuredWidth="65" measuredHeight="23" textAlignment="Center">
+    <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="10" x="336" y="129" width="105" text="MATEMATIKA" measuredWidth="105" measuredHeight="21" textAlignment="Center">
-    <font size="11px"/>
+  <widgets xsi:type="model:TextField" id="9" x="248" y="168" width="57" text="CVUT" measuredWidth="57" measuredHeight="23" textAlignment="Center">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="10" x="312" y="168" width="105" text="MATEMATIKA" measuredWidth="105" measuredHeight="23" textAlignment="Center">
+    <font/>
   </widgets>
   <widgets xsi:type="model:VScrollbar" id="11" x="887" y="102" height="523" measuredWidth="17" measuredHeight="523"/>
   <widgets xsi:type="model:TextArea" id="12" x="96" y="248" width="753" height="49" text="&#xD;&#xA;Test 1&#xD;&#xA;" measuredWidth="753" measuredHeight="49" lineHeight="1.7">
@@ -50,36 +56,57 @@
   <widgets xsi:type="model:Shape" id="20" x="800" y="424" width="37" height="33" measuredWidth="37" measuredHeight="33" shapeType="triangle">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="21" x="608" y="579" width="229" text="Spustit" measuredWidth="229" measuredHeight="25" link="../test/Test.screen">
+  <widgets xsi:type="model:Button" id="21" x="608" y="579" width="229" text="Spustit" measuredWidth="229" measuredHeight="25">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="22" x="320" y="168" width="73" text="BIOLOGIE" measuredWidth="73" measuredHeight="23" textAlignment="Center">
+  <widgets xsi:type="model:TextField" id="22" x="536" y="168" width="73" text="BIOLOGIE" measuredWidth="73" measuredHeight="23" textAlignment="Center">
     <font/>
   </widgets>
   <widgets xsi:type="model:WidgetGroup" id="23" x="566" y="257" measuredWidth="227" measuredHeight="32">
-    <widgets xsi:type="model:ProgressBar" id="24" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="40"/>
+    <widgets xsi:type="model:ProgressBar" id="24" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="85"/>
     <widgets xsi:type="model:Icon" id="25" x="195" measuredWidth="32" measuredHeight="32" icon="thumbs-up (large)"/>
     <widgets xsi:type="model:Icon" id="26" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
   </widgets>
   <widgets xsi:type="model:WidgetGroup" id="27" x="566" y="314" measuredWidth="227" measuredHeight="32">
-    <widgets xsi:type="model:ProgressBar" id="28" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="85"/>
+    <widgets xsi:type="model:ProgressBar" id="28" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25"/>
     <widgets xsi:type="model:Icon" id="29" x="195" measuredWidth="32" measuredHeight="32" icon="thumbs-up (large)"/>
     <widgets xsi:type="model:Icon" id="30" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
   </widgets>
   <widgets xsi:type="model:WidgetGroup" id="31" x="566" y="370" measuredWidth="227" measuredHeight="32">
-    <widgets xsi:type="model:ProgressBar" id="32" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25"/>
+    <widgets xsi:type="model:ProgressBar" id="32" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="85"/>
     <widgets xsi:type="model:Icon" id="33" x="195" measuredWidth="32" measuredHeight="32" icon="thumbs-up (large)"/>
     <widgets xsi:type="model:Icon" id="34" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
   </widgets>
   <widgets xsi:type="model:WidgetGroup" id="35" x="566" y="425" measuredWidth="227" measuredHeight="32">
-    <widgets xsi:type="model:ProgressBar" id="36" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="85"/>
+    <widgets xsi:type="model:ProgressBar" id="36" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="25"/>
     <widgets xsi:type="model:Icon" id="37" x="195" measuredWidth="32" measuredHeight="32" icon="thumbs-up (large)"/>
     <widgets xsi:type="model:Icon" id="38" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
   </widgets>
-  <widgets xsi:type="model:TextArea" id="39" x="608" y="476" width="229" height="93" text="Počet otázek: 42&#xD;&#xA;Obtížnost: Velmi těžká" measuredWidth="229" measuredHeight="93">
+  <widgets xsi:type="model:TextArea" id="39" x="608" y="476" width="229" height="93" text="Počet otázek: 42&#xD;&#xA;Obtížnost: Velmi těžká&#xD;&#xA;Dostupnost: Veřejný s heslem" measuredWidth="229" measuredHeight="93">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="40" x="232" y="127" text="FIT" measuredWidth="36" measuredHeight="25" link="Expanded.screen">
+  <widgets xsi:type="model:Button" id="42" x="496" y="260" text="Smazat" measuredWidth="58" measuredHeight="25" link="MyTests_Delete.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="43" x="424" y="260" text="Editovat" measuredWidth="63" measuredHeight="25" link="../testCreation/NewTest.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="44" x="496" y="317" text="Smazat" measuredWidth="58" measuredHeight="25" link="MyTests_Delete.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="45" x="424" y="317" text="Editovat" measuredWidth="63" measuredHeight="25" link="../testCreation/NewTest.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="46" x="496" y="373" text="Smazat" measuredWidth="58" measuredHeight="25" link="MyTests_Delete.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="47" x="424" y="373" text="Editovat" measuredWidth="63" measuredHeight="25" link="../testCreation/NewTest.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="48" x="496" y="432" text="Smazat" measuredWidth="58" measuredHeight="25" link="MyTests_Delete.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="49" x="424" y="432" text="Editovat" measuredWidth="63" measuredHeight="25" link="../testCreation/NewTest.screen">
     <font/>
   </widgets>
   <hRuler/>

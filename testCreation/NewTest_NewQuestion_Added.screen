@@ -8,7 +8,7 @@
     <font size="24px"/>
   </widgets>
   <widgets xsi:type="model:VScrollbar" id="26" x="887" y="102" height="523" measuredWidth="17" measuredHeight="523"/>
-  <widgets xsi:type="model:TextArea" id="64" x="96" y="216" width="753" height="393" measuredWidth="753" measuredHeight="393" lineHeight="1.7">
+  <widgets xsi:type="model:TextArea" id="64" x="96" y="216" width="753" height="399" measuredWidth="753" measuredHeight="399" lineHeight="1.7">
     <font/>
   </widgets>
   <widgets xsi:type="model:TextArea" id="74" x="104" y="264" width="737" height="67" text="Popis testu" measuredWidth="737" measuredHeight="67">
@@ -29,10 +29,7 @@
     </widgets>
     <widgets xsi:type="model:Arrow" id="216" x="112" y="16" width="8" height="10" measuredWidth="8" measuredHeight="10" left="false" right="true"/>
   </widgets>
-  <widgets xsi:type="model:Button" id="220" x="696" y="120" height="40" text="Uložit test" measuredWidth="87" measuredHeight="40" link="NewTest_NewTag.screen">
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:Button" id="221" x="798" y="120" height="40" text="Můj účet" measuredWidth="77" measuredHeight="40">
+  <widgets xsi:type="model:Button" id="221" x="798" y="120" height="40" text="Můj účet" measuredWidth="77" measuredHeight="40" link="../homepage/MyAccount.screen">
     <font/>
   </widgets>
   <widgets xsi:type="model:TextArea" id="223" x="104" y="344" width="737" height="197" measuredWidth="737" measuredHeight="197">
@@ -70,6 +67,12 @@
     <font/>
   </widgets>
   <widgets xsi:type="model:Button" id="239" x="208" y="169" width="105" text="Přidat štítek +" measuredWidth="105" measuredHeight="30" link="NewTest_NewTag.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="240" x="696" y="120" height="40" text="Uložit nyní" measuredWidth="90" measuredHeight="40" link="NewTest_Saved.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="241" x="104" y="579" width="217" text="Uložit a dokončit nový test" measuredWidth="217" measuredHeight="30" link="../homepage/MyTests.screen">
     <font/>
   </widgets>
   <hRuler/>

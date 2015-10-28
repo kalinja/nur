@@ -44,6 +44,9 @@
   <widgets xsi:type="model:Button" id="231" x="208" y="169" width="105" text="Přidat štítek +" measuredWidth="105" measuredHeight="30" link="NewTest_NewTag.screen">
     <font/>
   </widgets>
+  <widgets xsi:type="model:Button" id="232" x="104" y="568" width="217" text="Uložit a dokončit nový test" measuredWidth="217" measuredHeight="30" link="../homepage/MyTests.screen">
+    <font/>
+  </widgets>
   <hRuler/>
   <vRuler/>
   <font size="14px"/>
