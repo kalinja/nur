@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="47" y="48" width="857" height="577" text="Browser&#xA;http://selftest.cz" measuredWidth="857" measuredHeight="577">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="2" x="672" y="120" width="99" height="40" text="Vytvořit test" measuredWidth="99" measuredHeight="40">
+    <font size="14px"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="3" x="782" y="120" width="75" height="40" text="Můj účet" measuredWidth="75" measuredHeight="40">
+    <font size="14px"/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" id="4" x="208" y="120" width="457" text="Vyhledat" measuredWidth="457" measuredHeight="40">
+    <font size="24px"/>
+  </widgets>
+  <widgets xsi:type="model:VScrollbar" id="5" x="887" y="102" height="523" measuredWidth="17" measuredHeight="523"/>
+  <widgets xsi:type="model:TextArea" id="6" x="96" y="240" width="753" height="49" text="&#xD;&#xA;Test 1&#xD;&#xA;" measuredWidth="753" measuredHeight="49" lineHeight="1.7">
+    <font size="14px"/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="7" x="800" y="248" width="37" height="33" measuredWidth="37" measuredHeight="33" rotation="180" shapeType="triangle">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="8" x="96" y="409" width="753" height="198" text="Test 1" measuredWidth="753" measuredHeight="198" lineHeight="1.7">
+    <font size="14px"/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="9" x="96" y="297" width="753" height="49" text="Můj nejlepší test ever!!!!!!!" measuredWidth="753" measuredHeight="49" lineHeight="1.7">
+    <font size="14px"/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="10" x="800" y="305" width="37" height="33" measuredWidth="37" measuredHeight="33" rotation="180" shapeType="triangle">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="11" x="96" y="353" width="753" height="49" text="&#xD;&#xA;Test 1&#xD;&#xA;" measuredWidth="753" measuredHeight="49" lineHeight="1.7">
+    <font size="14px"/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="12" x="800" y="361" width="37" height="33" measuredWidth="37" measuredHeight="33" rotation="180" shapeType="triangle">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="13" x="800" y="416" width="37" height="33" measuredWidth="37" measuredHeight="33" shapeType="triangle">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="14" x="720" y="571" width="117" text="Spustit" measuredWidth="117" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Chart" id="15" x="112" y="477" width="489" height="119" measuredWidth="489" measuredHeight="119" chartType="line"/>
+  <widgets xsi:type="model:TextField" id="16" x="125" y="456" text="Úspěšnost" measuredWidth="84" measuredHeight="28" borderColor="#ffffff">
+    <font size="15px" bold="true" italic="false"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="17" x="664" y="251" text="Úspěšnost: 65%" measuredWidth="123" measuredHeight="28" borderColor="#ffffff">
+    <font size="15px" bold="true" italic="false"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="18" x="664" y="308" text="Úspěšnost: 100%" measuredWidth="132" measuredHeight="28" borderColor="#ffffff">
+    <font size="15px" bold="true" italic="false"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="19" x="664" y="364" text="Úspěšnost: 50%" measuredWidth="123" measuredHeight="28" borderColor="#ffffff">
+    <font size="15px" bold="true" italic="false"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="20" x="664" y="419" text="Úspěšnost: 80%" measuredWidth="123" measuredHeight="28" borderColor="#ffffff">
+    <font size="15px" bold="true" italic="false"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="21" x="608" y="536" width="229" text="Zobrazit správné výsledky" measuredWidth="229" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="22" x="608" y="458" width="229" height="71" text="Počet spuštění: 25&#xD;&#xA;Maximální hodnocení: 100%&#xD;&#xA;Poslední hodnocení: 75%" measuredWidth="229" measuredHeight="71" borderColor="#ffffff" lineHeight="1.7">
+    <font size="13px" bold="false"/>
+  </widgets>
+  <widgets xsi:type="model:Placeholder" id="23" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79"/>
+  <widgets xsi:type="model:Button" id="24" x="672" y="168" width="185" height="31" text="Vymazat celou historii" measuredWidth="185" measuredHeight="31">
+    <font size="14px"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="25" x="608" y="571" width="105" text="Vymazat" measuredWidth="105" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Alert" id="26" x="296" y="271" text="Alert&#xA;Opravdu chcete vymazat celou historii tohoto testu?&#xA;OK,Cancel" measuredWidth="363" measuredHeight="132" icon="warning (large)">
+    <items x="173" y="93" width="80" height="24" text="OK"/>
+    <items x="268" y="93" width="80" height="24" text="Cancel"/>
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

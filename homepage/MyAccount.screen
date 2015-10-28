@@ -85,14 +85,17 @@
   <widgets xsi:type="model:TextArea" id="39" x="608" y="476" width="229" height="93" text="Počet otázek: 42&#xD;&#xA;Obtížnost: Velmi těžká" measuredWidth="229" measuredHeight="93">
     <font/>
   </widgets>
-  <widgets xsi:type="model:WidgetGroup" id="46" x="688" y="160" measuredWidth="142" measuredHeight="117">
-    <widgets xsi:type="model:Tooltip" id="42" width="142" height="117" text="Pepa Novák" measuredWidth="142" measuredHeight="117" position="topRight">
+  <widgets xsi:type="model:WidgetGroup" id="46" x="688" y="160" measuredWidth="142" measuredHeight="153">
+    <widgets xsi:type="model:Tooltip" id="42" width="142" height="153" text="Pepa Novák" measuredWidth="142" measuredHeight="153" position="topRight">
       <font/>
     </widgets>
-    <widgets xsi:type="model:Button" id="43" y="44" width="142" height="37" text="Statistiky" measuredWidth="142" measuredHeight="37">
+    <widgets xsi:type="model:Button" id="43" y="44" width="142" height="37" text="Historie" measuredWidth="142" measuredHeight="37">
       <font/>
     </widgets>
     <widgets xsi:type="model:Button" id="44" y="80" width="142" height="37" text="Odhlásit se" measuredWidth="142" measuredHeight="37">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="47" y="116" width="142" height="37" text="Moje testy" measuredWidth="142" measuredHeight="37">
       <font/>
     </widgets>
   </widgets>
