@@ -29,7 +29,7 @@
     </widgets>
     <widgets xsi:type="model:Arrow" id="216" x="112" y="16" width="8" height="10" measuredWidth="8" measuredHeight="10" left="false" right="true"/>
   </widgets>
-  <widgets xsi:type="model:Button" id="220" x="696" y="120" height="40" text="Uložit test" measuredWidth="87" measuredHeight="40" link="NewTest_Saved.screen">
+  <widgets xsi:type="model:Button" id="220" x="696" y="120" height="40" text="Test uložen" measuredWidth="94" measuredHeight="40">
     <font/>
   </widgets>
   <widgets xsi:type="model:Button" id="221" x="798" y="120" height="40" text="Můj účet" measuredWidth="77" measuredHeight="40" link="../homepage/MyAccount.screen">
