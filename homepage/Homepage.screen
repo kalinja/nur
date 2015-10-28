@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="8" x="47" y="48" width="857" height="577" text="Browser&#xA;http://selftest.cz" measuredWidth="857" measuredHeight="577">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Placeholder" id="11" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79"/>
+  <widgets xsi:type="model:SearchField" id="16" x="208" y="120" width="473" text="Vyhledat" measuredWidth="473" measuredHeight="40">
+    <font size="24px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="18" x="208" y="168" width="33" text="FIT" measuredWidth="33" measuredHeight="28" textAlignment="Center">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="19" x="424" y="168" text="FEL" measuredWidth="33" measuredHeight="28" textAlignment="Center">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="20" x="464" y="168" width="65" text="DĚJEPIS" measuredWidth="65" measuredHeight="28" textAlignment="Center">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="21" x="248" y="168" width="57" text="CVUT" measuredWidth="57" measuredHeight="28" textAlignment="Center">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="22" x="312" y="168" width="105" text="MATEMATIKA" measuredWidth="105" measuredHeight="28" textAlignment="Center">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:VScrollbar" id="26" x="887" y="102" height="523" measuredWidth="17" measuredHeight="523"/>
+  <widgets xsi:type="model:TextArea" id="34" x="96" y="248" width="753" height="49" text="&#xD;&#xA;Test 1&#xD;&#xA;" measuredWidth="753" measuredHeight="49" lineHeight="1.7">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="33" x="800" y="256" width="37" height="33" measuredWidth="37" measuredHeight="33" rotation="180" shapeType="triangle">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="64" x="96" y="417" width="753" height="198" text="Test 1" measuredWidth="753" measuredHeight="198" lineHeight="1.7">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="74" x="104" y="476" width="473" height="133" text="Popis testu" measuredWidth="473" measuredHeight="133">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="102" x="96" y="305" width="753" height="49" text="Můj nejlepší test ever!!!!!!!" measuredWidth="753" measuredHeight="49" lineHeight="1.7">
+    <font size="19px"/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="103" x="800" y="313" width="37" height="33" measuredWidth="37" measuredHeight="33" rotation="180" shapeType="triangle">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="112" x="96" y="361" width="753" height="49" text="&#xD;&#xA;Test 1&#xD;&#xA;" measuredWidth="753" measuredHeight="49" lineHeight="1.7">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="113" x="800" y="369" width="37" height="33" measuredWidth="37" measuredHeight="33" rotation="180" shapeType="triangle">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="122" x="800" y="424" width="37" height="33" measuredWidth="37" measuredHeight="33" shapeType="triangle">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="186" x="608" y="579" width="229" text="Spustit" measuredWidth="229" measuredHeight="30">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="193" x="536" y="168" width="73" text="BIOLOGIE" measuredWidth="73" measuredHeight="28" textAlignment="Center">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="197" x="566" y="257" measuredWidth="227" measuredHeight="32">
+    <widgets xsi:type="model:ProgressBar" id="188" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="85"/>
+    <widgets xsi:type="model:Icon" id="194" x="195" measuredWidth="32" measuredHeight="32" icon="thumbs-up (large)"/>
+    <widgets xsi:type="model:Icon" id="195" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="198" x="566" y="314" measuredWidth="227" measuredHeight="32">
+    <widgets xsi:type="model:ProgressBar" id="199" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="75"/>
+    <widgets xsi:type="model:Icon" id="200" x="195" measuredWidth="32" measuredHeight="32" icon="thumbs-up (large)"/>
+    <widgets xsi:type="model:Icon" id="201" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="202" x="566" y="370" measuredWidth="227" measuredHeight="32">
+    <widgets xsi:type="model:ProgressBar" id="203" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="85"/>
+    <widgets xsi:type="model:Icon" id="204" x="195" measuredWidth="32" measuredHeight="32" icon="thumbs-up (large)"/>
+    <widgets xsi:type="model:Icon" id="205" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="206" x="566" y="425" measuredWidth="227" measuredHeight="32">
+    <widgets xsi:type="model:ProgressBar" id="207" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="25"/>
+    <widgets xsi:type="model:Icon" id="208" x="195" measuredWidth="32" measuredHeight="32" icon="thumbs-up (large)"/>
+    <widgets xsi:type="model:Icon" id="209" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="210" x="608" y="476" width="229" height="93" text="Počet otázek: 42&#xD;&#xA;Obtížnost: Velmi těžká" measuredWidth="229" measuredHeight="93">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="211" x="688" y="120" width="161" height="40" text="Přihlásit" measuredWidth="161" measuredHeight="40">
+    <font size="14px"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="14px"/>
+</model:Screen>
