@@ -23,28 +23,34 @@
   <widgets xsi:type="model:Combo" id="214" x="696" y="227" width="137" text=" Velmi těžká" measuredWidth="137" measuredHeight="28">
     <font/>
   </widgets>
-  <widgets xsi:type="model:WidgetGroup" id="217" x="104" y="336" measuredWidth="129" measuredHeight="30">
+  <widgets xsi:type="model:WidgetGroup" id="217" x="104" y="336" measuredWidth="129" measuredHeight="30" link="NewTest.screen">
     <widgets xsi:type="model:Button" id="215" width="129" text="Přidat otázku     " measuredWidth="129" measuredHeight="30">
       <font/>
     </widgets>
     <widgets xsi:type="model:Arrow" id="216" x="112" y="16" width="8" height="10" measuredWidth="8" measuredHeight="10" left="false" right="true"/>
   </widgets>
-  <widgets xsi:type="model:Button" id="220" x="696" y="120" height="40" text="Uložit test" measuredWidth="87" measuredHeight="40">
+  <widgets xsi:type="model:Button" id="220" x="696" y="120" height="40" text="Uložit test" measuredWidth="87" measuredHeight="40" link="NewTest_Saved.screen">
     <font/>
   </widgets>
   <widgets xsi:type="model:Button" id="221" x="798" y="120" height="40" text="Můj účet" measuredWidth="77" measuredHeight="40">
     <font/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="222" x="208" y="171" width="113" text="Přidat štítek  +" measuredWidth="113" measuredHeight="28" textAlignment="Center">
+  <widgets xsi:type="model:List" id="228" x="104" y="365" width="169" height="148" text="| Výběr jedné odpovědi&#xA; Výběr více odpovědí&#xA; Zadání odpovědi&#xA; ...&#xA; ..." measuredWidth="169" measuredHeight="148" selection="0">
+    <font/>
+    <items link="NewTest_NewQuestion_Added.screen" x="0" y="2" width="169" height="28" text="| Výběr jedné odpovědi"/>
+    <items link="NewTest_NewQuestion_Added.screen" x="0" y="30" width="169" height="28" text=" Výběr více odpovědí"/>
+    <items link="NewTest_NewQuestion_Added.screen" x="0" y="58" width="169" height="28" text=" Zadání odpovědi"/>
+    <items link="NewTest_NewQuestion_Added.screen" x="0" y="86" width="169" height="28" text=" ..."/>
+    <items link="NewTest_NewQuestion_Added.screen" x="0" y="114" width="169" height="28" text=" ..."/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="229" x="376" y="227" text="Veřejný" measuredWidth="69" measuredHeight="28" selected="true">
     <font/>
   </widgets>
-  <widgets xsi:type="model:List" id="228" x="104" y="365" width="169" height="132" text="| Výběr jedné odpovědi&#xA; Výběr více odpovědí&#xA; Zadání odpovědi&#xA; ...&#xA; ..." measuredWidth="169" measuredHeight="132" selection="0">
+  <widgets xsi:type="model:Button" id="230" x="472" y="226" text="Nastavit heslo" measuredWidth="113" measuredHeight="30">
     <font/>
-    <items x="0" y="2" width="169" height="28" text="| Výběr jedné odpovědi"/>
-    <items x="0" y="30" width="169" height="28" text=" Výběr více odpovědí"/>
-    <items x="0" y="58" width="169" height="28" text=" Zadání odpovědi"/>
-    <items x="0" y="86" width="169" height="28" text=" ..."/>
-    <items x="0" y="114" width="169" height="28" text=" ..."/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="231" x="208" y="169" width="105" text="Přidat štítek +" measuredWidth="105" measuredHeight="30" link="NewTest_NewTag.screen">
+    <font/>
   </widgets>
   <hRuler/>
   <vRuler/>
