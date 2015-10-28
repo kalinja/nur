@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="54" x="47" y="48" width="857" height="577" text="Browser&#xA;http://selftest.cz" measuredWidth="857" measuredHeight="577">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Placeholder" id="55" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79"/>
+  <widgets xsi:type="model:Button" id="56" x="672" y="120" width="99" height="40" text="Vytvořit test" measuredWidth="99" measuredHeight="40" link="../testCreation/NewTest.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="57" x="782" y="120" height="40" text="Můj účet" measuredWidth="67" measuredHeight="40">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" id="58" x="208" y="120" width="457" text="Vyhledat" measuredWidth="457" measuredHeight="40">
+    <font size="24px"/>
+  </widgets>
+  <widgets xsi:type="model:VScrollbar" id="64" x="887" y="102" height="523" measuredWidth="17" measuredHeight="523"/>
+  <widgets xsi:type="model:Label" id="93" x="104" y="208" text="Testovací test" measuredWidth="264" measuredHeight="67">
+    <font size="43px"/>
+  </widgets>
+  <widgets xsi:type="model:ProgressBar" id="94" x="576" y="232" width="221" height="34" measuredWidth="221" measuredHeight="34"/>
+  <widgets xsi:type="model:Label" id="95" x="464" y="234" text="Doknčeno:" measuredWidth="79" measuredHeight="29">
+    <font size="16px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="96" x="549" y="234" text="0%" measuredWidth="28" measuredHeight="29">
+    <font size="16px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="97" x="803" y="234" text="100%" measuredWidth="46" measuredHeight="29">
+    <font size="16px"/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="98" x="104" y="296" width="745" height="169" measuredWidth="745" measuredHeight="169">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="99" x="114" y="306" text="1. Výběr z více možností" measuredWidth="190" measuredHeight="29">
+    <font size="16px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="100" x="104" y="480" width="745" height="121" measuredWidth="745" measuredHeight="121">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="101" x="114" y="369" text="a) Krátká odpověď" measuredWidth="118" measuredHeight="23" selected="true">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="102" x="114" y="334" text="Odpověz na tuto otázku, která může mít více správných odpovědí" measuredWidth="351" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="103" x="114" y="391" text="b) Delší odpověď, kterou budete muset přečíst 2x abyste ji vůbec pochopili." measuredWidth="416" measuredHeight="23" selected="true">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="104" x="114" y="413" measuredWidth="21" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="109" x="134" y="413" text="c) Odpověď tak dlouhá, že než dočtete na její konec, zapomenete jak začínala. I to, jak zněla otázka. Začátek vyplňování tohoto testu" measuredWidth="699" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="110" x="144" y="432" text=" se ztratí někde v minulosti a konec bude stále v nedohlednu." measuredWidth="326" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="111" x="114" y="490" text="2. Otevřená otázka" measuredWidth="148" measuredHeight="29">
+    <font size="16px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="112" x="114" y="518" text="Na tuhle otázku musíte napsat vlastní odpověď. Správně, nejde to tipnout. Musíte to vědět. Zvládnete to?" measuredWidth="558" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="113" x="114" y="552" text="Odpověď:" measuredWidth="62" measuredHeight="23">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="114" x="175" y="552" width="314" measuredWidth="314" measuredHeight="23">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
