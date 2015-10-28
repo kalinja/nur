@@ -4,7 +4,7 @@
     <font/>
   </widgets>
   <widgets xsi:type="model:Placeholder" id="2" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79"/>
-  <widgets xsi:type="model:Button" id="3" x="672" y="120" width="99" height="40" text="Vytvořit test" measuredWidth="99" measuredHeight="40">
+  <widgets xsi:type="model:Button" id="3" x="672" y="120" width="99" height="40" text="Vytvořit test" measuredWidth="99" measuredHeight="40" link="../testCreation/NewTest.screen">
     <font/>
   </widgets>
   <widgets xsi:type="model:Button" id="4" x="782" y="120" height="40" text="Můj účet" measuredWidth="67" measuredHeight="40">
