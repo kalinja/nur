@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="54" x="47" y="48" width="857" height="577" text="Browser&#xA;http://selftest.cz" measuredWidth="857" measuredHeight="577">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Placeholder" id="55" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79"/>
+  <widgets xsi:type="model:Button" id="56" x="672" y="120" width="99" height="40" text="Vytvořit test" measuredWidth="99" measuredHeight="40" link="../testCreation/NewTest.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="57" x="782" y="120" height="40" text="Můj účet" measuredWidth="67" measuredHeight="40">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" id="58" x="208" y="120" width="457" text="Vyhledat" measuredWidth="457" measuredHeight="40">
+    <font size="24px"/>
+  </widgets>
+  <widgets xsi:type="model:VScrollbar" id="64" x="887" y="102" height="523" measuredWidth="17" measuredHeight="523"/>
+  <widgets xsi:type="model:Label" id="93" x="104" y="208" text="Testovací test" measuredWidth="264" measuredHeight="67">
+    <font size="43px"/>
+  </widgets>
+  <widgets xsi:type="model:ProgressBar" id="94" x="576" y="232" width="221" height="34" measuredWidth="221" measuredHeight="34" value="100"/>
+  <widgets xsi:type="model:Label" id="95" x="464" y="234" text="Doknčeno:" measuredWidth="79" measuredHeight="29">
+    <font size="16px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="96" x="549" y="234" text="0%" measuredWidth="28" measuredHeight="29">
+    <font size="16px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="97" x="803" y="234" text="100%" measuredWidth="46" measuredHeight="29">
+    <font size="16px"/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="98" x="104" y="296" width="729" height="113" measuredWidth="729" measuredHeight="113">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="99" x="114" y="306" text="X. Poslední otázka" measuredWidth="145" measuredHeight="29">
+    <font size="16px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="102" x="114" y="334" text="Poslední otázka testu. Vyberte jednu odpověď ze seznamu." measuredWidth="314" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:VScrollbar" id="115" x="832" y="296" height="305" measuredWidth="17" measuredHeight="305" value="100"/>
+  <widgets xsi:type="model:Label" id="116" x="114" y="368" text="Odpověď:" measuredWidth="62" measuredHeight="23">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:List" id="118" x="175" y="390" width="208" text="(bg:blue)|Odpověď 1&#xA;Odpověď 2&#xA;Odpověď 3&#xA;Odpověď 4" measuredWidth="208" measuredHeight="88">
+    <font/>
+    <items x="0" y="2" width="208" height="21" text="(bg:blue)|Odpověď 1"/>
+    <items x="0" y="23" width="208" height="21" text="Odpověď 2"/>
+    <items x="0" y="44" width="208" height="21" text="Odpověď 3"/>
+    <items x="0" y="65" width="208" height="21" text="Odpověď 4"/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="119" x="175" y="368" width="208" text="&#xD;&#xA;" measuredWidth="208" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="120" x="664" y="536" width="133" height="49" text="Vyhodnotit" measuredWidth="133" measuredHeight="49">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

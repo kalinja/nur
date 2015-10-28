@@ -30,43 +30,35 @@
   <widgets xsi:type="model:Group" id="98" x="104" y="296" width="729" height="169" measuredWidth="729" measuredHeight="169">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="99" x="114" y="306" text="1. Výběr z více možností" measuredWidth="190" measuredHeight="29">
+  <widgets xsi:type="model:Label" id="99" x="114" y="306" text="1. Jedna správná odpověď" measuredWidth="206" measuredHeight="29">
     <font size="16px" bold="true"/>
   </widgets>
   <widgets xsi:type="model:Group" id="100" x="104" y="480" width="729" height="121" measuredWidth="729" measuredHeight="121">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Checkbox" id="101" x="114" y="369" text="a) Krátká odpověď" measuredWidth="118" measuredHeight="23" selected="true">
+  <widgets xsi:type="model:Label" id="102" x="114" y="334" text="Na tuto otázku existuje jen jedna odpověď. Znáte ji?" measuredWidth="278" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Label" id="102" x="114" y="334" text="Odpověz na tuto otázku, která může mít více správných odpovědí" measuredWidth="351" measuredHeight="23">
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:Checkbox" id="103" x="114" y="391" text="b) Delší odpověď, kterou budete muset přečíst 2x abyste ji vůbec pochopili." measuredWidth="416" measuredHeight="23" selected="true">
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:Checkbox" id="104" x="114" y="413" measuredWidth="21" measuredHeight="23">
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:Label" id="109" x="134" y="413" text="c) Odpověď tak dlouhá, že než dočtete na její konec, zapomenete jak začínala. I to, jak zněla otázka. Začátek vyplňování tohoto testu" measuredWidth="699" measuredHeight="23">
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:Label" id="110" x="144" y="432" text=" se ztratí někde v minulosti a konec bude stále v nedohlednu." measuredWidth="326" measuredHeight="23">
-    <font/>
-  </widgets>
-  <widgets xsi:type="model:Label" id="111" x="114" y="490" text="2. Otevřená otázka" measuredWidth="148" measuredHeight="29">
+  <widgets xsi:type="model:Label" id="111" x="114" y="490" text="2. Výběr ze seznamu" measuredWidth="161" measuredHeight="29">
     <font size="16px" bold="true"/>
   </widgets>
-  <widgets xsi:type="model:Label" id="112" x="114" y="518" text="Na tuhle otázku musíte napsat vlastní odpověď. Správně, nejde to tipnout. Musíte to vědět. Zvládnete to?" measuredWidth="558" measuredHeight="23">
+  <widgets xsi:type="model:Label" id="112" x="114" y="518" text="Ze seznamu vyberte jednu správnou odpověď." measuredWidth="250" measuredHeight="23">
     <font/>
   </widgets>
   <widgets xsi:type="model:Label" id="113" x="114" y="552" text="Odpověď:" measuredWidth="62" measuredHeight="23">
     <font bold="true"/>
   </widgets>
-  <widgets xsi:type="model:TextField" id="114" x="175" y="552" width="314" measuredWidth="314" measuredHeight="23">
+  <widgets xsi:type="model:List" id="115" x="114" y="356" text="(o) a) Krátká odpověď&#xA;( ) b) Delší odpověď, kterou budete muset přečíst 2x abyste ji vůbec pochopili.&#xA;( ) c) Odpověď tak dlouhá, že než dočtete na její konec, zapomenete jak začínala. I to, jak zněla otázka. Začátek vyplňování tohoto &#xA;   &#x9;&#x9;   testu se ztratí někde v minulosti a konec bude stále v nedohlednu.&#xA;" measuredWidth="697" measuredHeight="92" border="false" alpha="0">
+    <font/>
+    <items x="0" y="2" width="697" height="22" text="(o) a) Krátká odpověď"/>
+    <items x="0" y="24" width="697" height="22" text="( ) b) Delší odpověď, kterou budete muset přečíst 2x abyste ji vůbec pochopili."/>
+    <items x="0" y="46" width="697" height="22" text="( ) c) Odpověď tak dlouhá, že než dočtete na její konec, zapomenete jak začínala. I to, jak zněla otázka. Začátek vyplňování tohoto "/>
+    <items x="0" y="68" width="697" height="22" text="   &#x9;&#x9;   testu se ztratí někde v minulosti a konec bude stále v nedohlednu."/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="116" x="184" y="552" width="208" text="Odpověď 1" measuredWidth="208" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:VScrollbar" id="115" x="832" y="296" height="305" measuredWidth="17" measuredHeight="305"/>
+  <widgets xsi:type="model:VScrollbar" id="118" x="832" y="296" height="305" measuredWidth="17" measuredHeight="305"/>
   <hRuler/>
   <vRuler/>
   <font size="12px"/>
