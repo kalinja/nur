@@ -70,8 +70,8 @@
     <font/>
   </widgets>
   <widgets xsi:type="model:Alert" id="26" x="296" y="271" text="Alert&#xA;Opravdu chcete vymazat celou historii tohoto testu?&#xA;OK,Cancel" measuredWidth="363" measuredHeight="132" icon="warning (large)">
-    <items x="173" y="93" width="80" height="24" text="OK"/>
-    <items x="268" y="93" width="80" height="24" text="Cancel"/>
+    <items link="TestHistoryDeleted.screen" x="173" y="93" width="80" height="24" text="OK"/>
+    <items link="History.screen" x="268" y="93" width="80" height="24" text="Cancel"/>
     <font/>
   </widgets>
   <hRuler/>

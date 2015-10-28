@@ -3,15 +3,12 @@
   <widgets xsi:type="model:Browser" id="1" x="47" y="48" width="857" height="577" text="Browser&#xA;http://selftest.cz" measuredWidth="857" measuredHeight="577">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Placeholder" id="2" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79"/>
-  <widgets xsi:type="model:Button" id="4" x="688" y="120" width="161" height="40" text="Přihlásit" measuredWidth="161" measuredHeight="40">
+  <widgets xsi:type="model:Placeholder" id="2" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79" link="Homepage.screen"/>
+  <widgets xsi:type="model:Button" id="4" x="688" y="120" width="161" height="40" text="Přihlásit" measuredWidth="161" measuredHeight="40" link="Login.screen">
     <font/>
   </widgets>
   <widgets xsi:type="model:SearchField" id="5" x="208" y="120" width="473" measuredWidth="473" measuredHeight="40">
     <font size="24px"/>
-  </widgets>
-  <widgets xsi:type="model:TextField" id="6" x="232" y="129" width="33" text="FIT" measuredWidth="33" measuredHeight="21" textAlignment="Center">
-    <font size="11px"/>
   </widgets>
   <widgets xsi:type="model:TextField" id="7" x="208" y="168" text="FEL" measuredWidth="29" measuredHeight="23" textAlignment="Center">
     <font/>
@@ -53,7 +50,7 @@
   <widgets xsi:type="model:Shape" id="20" x="800" y="424" width="37" height="33" measuredWidth="37" measuredHeight="33" shapeType="triangle">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="21" x="608" y="579" width="229" text="Spustit" measuredWidth="229" measuredHeight="25">
+  <widgets xsi:type="model:Button" id="21" x="608" y="579" width="229" text="Spustit" measuredWidth="229" measuredHeight="25" link="../test/Test.screen">
     <font/>
   </widgets>
   <widgets xsi:type="model:TextField" id="22" x="320" y="168" width="73" text="BIOLOGIE" measuredWidth="73" measuredHeight="23" textAlignment="Center">
@@ -80,6 +77,9 @@
     <widgets xsi:type="model:Icon" id="38" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
   </widgets>
   <widgets xsi:type="model:TextArea" id="39" x="608" y="476" width="229" height="93" text="Počet otázek: 42&#xD;&#xA;Obtížnost: Velmi těžká" measuredWidth="229" measuredHeight="93">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="40" x="232" y="127" text="FIT" measuredWidth="36" measuredHeight="25" link="Expanded.screen">
     <font/>
   </widgets>
   <hRuler/>
