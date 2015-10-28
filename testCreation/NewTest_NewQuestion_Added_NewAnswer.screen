@@ -52,13 +52,13 @@
       <font/>
     </widgets>
   </widgets>
-  <widgets xsi:type="model:Button" id="229" x="758" y="416" text="Odebrat" measuredWidth="75" measuredHeight="30" link="NewTest_NewQuestion.screen">
+  <widgets xsi:type="model:Button" id="229" x="758" y="416" text="Odebrat" measuredWidth="75" measuredHeight="30" link="NewTest_NewQuestion_Added.screen">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="230" x="758" y="445" text="Odebrat" measuredWidth="75" measuredHeight="30" link="NewTest_NewQuestion.screen">
+  <widgets xsi:type="model:Button" id="230" x="758" y="445" text="Odebrat" measuredWidth="75" measuredHeight="30" link="NewTest_NewQuestion_Added.screen">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="231" x="758" y="474" text="Odebrat" measuredWidth="75" measuredHeight="30" link="NewTest_NewQuestion.screen">
+  <widgets xsi:type="model:Button" id="231" x="758" y="474" text="Odebrat" measuredWidth="75" measuredHeight="30" link="NewTest_NewQuestion_Added.screen">
     <font/>
   </widgets>
   <widgets xsi:type="model:TextArea" id="232" x="140" y="418" width="619" text="Špatná odpověď 1" measuredWidth="619" measuredHeight="28">

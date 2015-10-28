@@ -3,11 +3,11 @@
   <widgets xsi:type="model:Browser" id="1" x="47" y="48" width="857" height="577" text="Browser&#xA;http://selftest.cz" measuredWidth="857" measuredHeight="577">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Placeholder" id="2" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79"/>
+  <widgets xsi:type="model:Placeholder" id="2" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79" link="Homepage.screen"/>
   <widgets xsi:type="model:Button" id="3" x="672" y="120" width="99" height="40" text="Vytvořit test" measuredWidth="99" measuredHeight="40" link="../testCreation/NewTest.screen">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="4" x="782" y="120" height="40" text="Můj účet" measuredWidth="67" measuredHeight="40">
+  <widgets xsi:type="model:Button" id="4" x="782" y="120" height="40" text="Můj účet" measuredWidth="67" measuredHeight="40" link="MyAccount.screen">
     <font/>
   </widgets>
   <widgets xsi:type="model:SearchField" id="5" x="208" y="120" width="457" text="Vyhledat" measuredWidth="457" measuredHeight="40">
@@ -63,41 +63,51 @@
     <font/>
   </widgets>
   <widgets xsi:type="model:WidgetGroup" id="23" x="566" y="257" measuredWidth="227" measuredHeight="32">
-    <widgets xsi:type="model:ProgressBar" id="24" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25"/>
+    <widgets xsi:type="model:ProgressBar" id="24" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="85"/>
     <widgets xsi:type="model:Icon" id="25" x="195" measuredWidth="32" measuredHeight="32" icon="thumbs-up (large)"/>
     <widgets xsi:type="model:Icon" id="26" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
   </widgets>
   <widgets xsi:type="model:WidgetGroup" id="27" x="566" y="314" measuredWidth="227" measuredHeight="32">
-    <widgets xsi:type="model:ProgressBar" id="28" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="25"/>
+    <widgets xsi:type="model:ProgressBar" id="28" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25"/>
     <widgets xsi:type="model:Icon" id="29" x="195" measuredWidth="32" measuredHeight="32" icon="thumbs-up (large)"/>
     <widgets xsi:type="model:Icon" id="30" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
   </widgets>
   <widgets xsi:type="model:WidgetGroup" id="31" x="566" y="370" measuredWidth="227" measuredHeight="32">
-    <widgets xsi:type="model:ProgressBar" id="32" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="100"/>
+    <widgets xsi:type="model:ProgressBar" id="32" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="85"/>
     <widgets xsi:type="model:Icon" id="33" x="195" measuredWidth="32" measuredHeight="32" icon="thumbs-up (large)"/>
     <widgets xsi:type="model:Icon" id="34" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
   </widgets>
   <widgets xsi:type="model:WidgetGroup" id="35" x="566" y="425" measuredWidth="227" measuredHeight="32">
-    <widgets xsi:type="model:ProgressBar" id="36" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="75"/>
+    <widgets xsi:type="model:ProgressBar" id="36" x="39" y="3" width="146" height="25" measuredWidth="146" measuredHeight="25" value="25"/>
     <widgets xsi:type="model:Icon" id="37" x="195" measuredWidth="32" measuredHeight="32" icon="thumbs-up (large)"/>
     <widgets xsi:type="model:Icon" id="38" measuredWidth="32" measuredHeight="32" icon="thumbs-down (large)"/>
   </widgets>
-  <widgets xsi:type="model:TextArea" id="39" x="608" y="476" width="229" height="93" text="Počet otázek: 42&#xD;&#xA;Obtížnost: Velmi těžká" measuredWidth="229" measuredHeight="93">
+  <widgets xsi:type="model:TextArea" id="39" x="608" y="476" width="229" height="93" text="Počet otázek: 42&#xD;&#xA;Obtížnost: Velmi těžká&#xD;&#xA;Dostupnost: Veřejný s heslem" measuredWidth="229" measuredHeight="93">
     <font/>
   </widgets>
-  <widgets xsi:type="model:WidgetGroup" id="46" x="688" y="160" measuredWidth="142" measuredHeight="153">
-    <widgets xsi:type="model:Tooltip" id="42" width="142" height="153" text="Pepa Novák" measuredWidth="142" measuredHeight="153" position="topRight">
-      <font/>
-    </widgets>
-    <widgets xsi:type="model:Button" id="43" y="44" width="142" height="37" text="Historie" measuredWidth="142" measuredHeight="37">
-      <font/>
-    </widgets>
-    <widgets xsi:type="model:Button" id="44" y="80" width="142" height="37" text="Moje testy" measuredWidth="142" measuredHeight="37" link="MyTests.screen">
-      <font/>
-    </widgets>
-    <widgets xsi:type="model:Button" id="47" y="116" width="142" height="37" text="Odhlásit se" measuredWidth="142" measuredHeight="37">
-      <font/>
-    </widgets>
+  <widgets xsi:type="model:Button" id="42" x="496" y="260" text="Smazat" measuredWidth="58" measuredHeight="25" link="MyTests_Delete.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="43" x="424" y="260" text="Editovat" measuredWidth="63" measuredHeight="25" link="../testCreation/NewTest.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="44" x="496" y="317" text="Smazat" measuredWidth="58" measuredHeight="25" link="MyTests_Delete.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="45" x="424" y="317" text="Editovat" measuredWidth="63" measuredHeight="25" link="../testCreation/NewTest.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="46" x="496" y="373" text="Smazat" measuredWidth="58" measuredHeight="25" link="MyTests_Delete.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="47" x="424" y="373" text="Editovat" measuredWidth="63" measuredHeight="25" link="../testCreation/NewTest.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="48" x="496" y="432" text="Smazat" measuredWidth="58" measuredHeight="25" link="MyTests_Delete.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="49" x="424" y="432" text="Editovat" measuredWidth="63" measuredHeight="25" link="../testCreation/NewTest.screen">
+    <font/>
   </widgets>
   <hRuler/>
   <vRuler/>

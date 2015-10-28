@@ -32,7 +32,7 @@
   <widgets xsi:type="model:Button" id="220" x="696" y="120" height="40" text="Uložit test" measuredWidth="87" measuredHeight="40" link="NewTest_Saved.screen">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="221" x="798" y="120" height="40" text="Můj účet" measuredWidth="77" measuredHeight="40">
+  <widgets xsi:type="model:Button" id="221" x="798" y="120" height="40" text="Můj účet" measuredWidth="77" measuredHeight="40" link="../homepage/MyAccount.screen">
     <font/>
   </widgets>
   <widgets xsi:type="model:Checkbox" id="229" x="376" y="227" text="Veřejný" measuredWidth="69" measuredHeight="28" link="NewTest.screen">
