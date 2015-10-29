@@ -13,7 +13,7 @@
   <widgets xsi:type="model:SearchField" id="58" x="208" y="120" width="457" text="Vyhledat" measuredWidth="457" measuredHeight="40">
     <font size="24px"/>
   </widgets>
-  <widgets xsi:type="model:VScrollbar" id="64" x="887" y="102" height="523" measuredWidth="17" measuredHeight="523"/>
+  <widgets xsi:type="model:VScrollbar" id="64" x="887" y="102" height="523" measuredWidth="17" measuredHeight="523" value="100"/>
   <widgets xsi:type="model:Label" id="93" x="104" y="208" text="Testovací test" measuredWidth="264" measuredHeight="67">
     <font size="43px"/>
   </widgets>
@@ -27,7 +27,7 @@
   <widgets xsi:type="model:Label" id="97" x="803" y="234" text="100%" measuredWidth="46" measuredHeight="29">
     <font size="16px"/>
   </widgets>
-  <widgets xsi:type="model:Group" id="98" x="104" y="296" width="729" height="113" measuredWidth="729" measuredHeight="113">
+  <widgets xsi:type="model:Group" id="98" x="104" y="296" width="745" height="113" measuredWidth="745" measuredHeight="113">
     <font/>
   </widgets>
   <widgets xsi:type="model:Label" id="99" x="114" y="306" text="X. Poslední otázka" measuredWidth="145" measuredHeight="29">
@@ -36,7 +36,6 @@
   <widgets xsi:type="model:Label" id="102" x="114" y="334" text="Poslední otázka testu. Vyberte jednu odpověď ze seznamu." measuredWidth="314" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:VScrollbar" id="115" x="832" y="296" height="305" measuredWidth="17" measuredHeight="305" value="100"/>
   <widgets xsi:type="model:Label" id="116" x="114" y="368" text="Odpověď:" measuredWidth="62" measuredHeight="23">
     <font bold="true"/>
   </widgets>

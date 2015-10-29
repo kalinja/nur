@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="54" x="47" y="48" width="857" height="577" text="Browser&#xA;http://selftest.cz" measuredWidth="857" measuredHeight="577">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Placeholder" id="55" x="57" y="120" width="137" height="79" text="Logo" measuredWidth="137" measuredHeight="79"/>
+  <widgets xsi:type="model:Button" id="56" x="672" y="120" width="99" height="40" text="Vytvořit test" measuredWidth="99" measuredHeight="40" link="../testCreation/NewTest.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="57" x="782" y="120" height="40" text="Můj účet" measuredWidth="67" measuredHeight="40">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" id="58" x="208" y="120" width="457" text="Vyhledat" measuredWidth="457" measuredHeight="40">
+    <font size="24px"/>
+  </widgets>
+  <widgets xsi:type="model:VScrollbar" id="64" x="887" y="102" height="523" measuredWidth="17" measuredHeight="523"/>
+  <widgets xsi:type="model:Label" id="93" x="104" y="208" text="Testovací test" measuredWidth="264" measuredHeight="67">
+    <font size="43px"/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="98" x="104" y="312" width="745" height="169" measuredWidth="745" measuredHeight="169">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="99" x="114" y="322" text="1. Jedna správná odpověď" measuredWidth="206" measuredHeight="29">
+    <font size="16px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="100" x="104" y="494" width="745" height="121" measuredWidth="745" measuredHeight="121">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="102" x="114" y="350" text="Na tuto otázku existuje jen jedna odpověď. Znáte ji?" measuredWidth="278" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="111" x="114" y="504" text="2. Výběr ze seznamu" measuredWidth="161" measuredHeight="29">
+    <font size="16px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="112" x="114" y="532" text="Ze seznamu vyberte jednu správnou odpověď." measuredWidth="250" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="113" x="114" y="566" text="Odpověď:" measuredWidth="62" measuredHeight="23">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:List" id="115" x="114" y="372" text="(o) a) Krátká odpověď&#xA;( ) b) Delší odpověď, kterou budete muset přečíst 2x abyste ji vůbec pochopili.&#xA;( ) c) Odpověď tak dlouhá, že než dočtete na její konec, zapomenete jak začínala. I to, jak zněla otázka. Začátek vyplňování tohoto &#xA;   &#x9;&#x9;   testu se ztratí někde v minulosti a konec bude stále v nedohlednu.&#xA;" measuredWidth="697" measuredHeight="92" border="false" alpha="0">
+    <font/>
+    <items x="0" y="2" width="697" height="22" text="(o) a) Krátká odpověď"/>
+    <items x="0" y="24" width="697" height="22" text="( ) b) Delší odpověď, kterou budete muset přečíst 2x abyste ji vůbec pochopili."/>
+    <items x="0" y="46" width="697" height="22" text="( ) c) Odpověď tak dlouhá, že než dočtete na její konec, zapomenete jak začínala. I to, jak zněla otázka. Začátek vyplňování tohoto "/>
+    <items x="0" y="68" width="697" height="22" text="   &#x9;&#x9;   testu se ztratí někde v minulosti a konec bude stále v nedohlednu."/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="116" x="184" y="566" width="208" text="Odpověď 1" measuredWidth="208" measuredHeight="23" background="#00ff00" alpha="64">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="119" x="734" y="324" text="Nahlásit chybu" measuredWidth="99" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="120" x="740" y="506" text="Nahlásit chybu" measuredWidth="99" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="121" x="114" y="376" width="719" height="21" measuredWidth="719" measuredHeight="21" background="#00ff00" alpha="64" foreground="#00ff00" border="false" shapeType="rectangle">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="122" x="724" y="232" width="115" height="35" text="Ohodnotit test" measuredWidth="115" measuredHeight="35">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="123" x="104" y="280" text="Dokončeno! Úspěšnost: 100% (10/10)" measuredWidth="307" measuredHeight="31">
+    <font size="17px" bold="true"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
