@@ -37,7 +37,7 @@
   <widgets xsi:type="model:Shape" id="20" x="800" y="416" width="37" height="33" measuredWidth="37" measuredHeight="33" shapeType="triangle">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="21" x="720" y="571" width="117" text="Spustit" measuredWidth="117" measuredHeight="25" link="../testCreation/NewTest.screen">
+  <widgets xsi:type="model:Button" id="21" x="720" y="571" width="117" text="Spustit" measuredWidth="117" measuredHeight="25" link="../test/Test.screen">
     <font/>
   </widgets>
   <widgets xsi:type="model:Chart" id="40" x="112" y="477" width="489" height="119" measuredWidth="489" measuredHeight="119" chartType="line"/>
