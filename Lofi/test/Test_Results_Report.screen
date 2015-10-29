@@ -74,10 +74,10 @@
   <widgets xsi:type="model:Label" id="128" x="550" y="566" text="Zvládnu" measuredWidth="49" measuredHeight="23">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="129" x="734" y="324" text="Nahlásit chybu" measuredWidth="99" measuredHeight="25" link="Test_Results2_Report.screen">
+  <widgets xsi:type="model:Button" id="129" x="734" y="324" text="Nahlásit chybu" measuredWidth="99" measuredHeight="25">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="130" x="740" y="506" text="Nahlásit chybu" measuredWidth="99" measuredHeight="25" link="Test_Results2_Report.screen">
+  <widgets xsi:type="model:Button" id="130" x="740" y="506" text="Nahlásit chybu" measuredWidth="99" measuredHeight="25">
     <font/>
   </widgets>
   <widgets xsi:type="model:Label" id="131" x="104" y="276" text="Dokončeno! Úspěšnost: 80% (8/10)" measuredWidth="287" measuredHeight="31">
@@ -86,10 +86,26 @@
   <widgets xsi:type="model:Button" id="132" x="734" y="274" width="115" height="35" text="Ohodnotit test" measuredWidth="115" measuredHeight="35">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="133" x="608" y="274" width="115" height="35" text="Spustit znovu" measuredWidth="115" measuredHeight="35" link="Test_MultipleChoiceQst_OpenedQst.screen">
+  <widgets xsi:type="model:Button" id="133" x="608" y="274" width="115" height="35" text="Spustit znovu" measuredWidth="115" measuredHeight="35">
     <font/>
   </widgets>
-  <widgets xsi:type="model:Button" id="134" x="484" y="274" width="115" height="35" text="Zavřít test" measuredWidth="115" measuredHeight="35" link="../homepage/Logged.screen">
+  <widgets xsi:type="model:Button" id="134" x="484" y="274" width="115" height="35" text="Zavřít test" measuredWidth="115" measuredHeight="35">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Shape" id="135" x="47" y="102" width="841" height="523" measuredWidth="841" measuredHeight="523" background="#999999" alpha="128" border="false" shapeType="rectangle">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Window" id="136" x="264" y="253" width="391" height="221" text="Nahlášení chyby" measuredWidth="391" measuredHeight="221"/>
+  <widgets xsi:type="model:Button" id="137" x="351" y="424" width="82" text="Odeslat" measuredWidth="82" measuredHeight="25" link="Test_Results.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="138" x="484" y="424" width="82" text="Zrušit" measuredWidth="82" measuredHeight="25" link="Test_Results.screen">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="139" x="274" y="280" text="Co je podle vás s otázkou špatně?" measuredWidth="189" measuredHeight="23">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="140" x="274" y="306" width="367" height="111" text="Všechno." measuredWidth="367" measuredHeight="111">
     <font/>
   </widgets>
   <hRuler>
