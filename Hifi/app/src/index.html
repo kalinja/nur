@@ -23,13 +23,12 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-
-
-  <div ng-view>
-
-      This should get replaced.
-
-  </div>
+  <div class="container">
+    <div ng-include src="'header/header.html'">
+    </div>
+    <div ng-view>
+    </div>
+  </div> <!-- /container -->
 
   <div>Angular seed app: v<span app-version></span></div>
 
@@ -38,10 +37,12 @@
   -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
   <script src="app.js"></script>
+  <script src="header/header.js"></script>
   <script src="view1/view1.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
