@@ -3,6 +3,10 @@
 
 /* Space out content a bit */
 
+.right {
+  margin-left: 1em;
+}
+
 body {
   padding-top: 20px;
   padding-bottom: 20px;
