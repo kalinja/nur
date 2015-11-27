@@ -1,28 +1,22 @@
 'use strict';
 
-angular.module('Selftest.header', [])
+header = angular.module('Selftest.header', [])
 
-.controller('HeaderCtrl',
-  function($scope, $log) {
-
+header.controller('HeaderCtrl',
+  ($scope, $log) ->
     $scope.items = [
       'The first choice!',
       'And another choice for you.',
       'but wait! A third!'
-    ];
+    ]
 
-    $scope.status = {
-      isopen: false
-    };
+    $scope.status = isopen: false
 
-    $scope.toggled = function(open) {
+    $scope.toggled = (open) ->
       $log.log('Dropdown is now: ', open);
-    };
 
-    $scope.toggleDropdown = function($event) {
+    $scope.toggleDropdown = ($event) ->
       $event.preventDefault();
       $event.stopPropagation();
       $scope.status.isopen = !$scope.status.isopen;
-    };
-  }
-);
+)

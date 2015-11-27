@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
   <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.css">
-  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="src/app.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
@@ -24,7 +24,7 @@
   <![endif]-->
 
   <div class="container">
-    <div ng-include src="'header/header.html'">
+    <div ng-include src="'src/header/header.html'">
     </div>
     <div ng-view>
     </div>
@@ -41,9 +41,9 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
-  <script src="app.js"></script>
-  <script src="header/header.js"></script>
-  <script src="view1/view1.js"></script>
+  <script src="generated/app.js"></script>
+  <script src="generated/header/header.js"></script>
+  <script src="generated/view1/view1.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
