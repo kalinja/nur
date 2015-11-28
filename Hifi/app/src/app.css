@@ -3,8 +3,29 @@
 
 /* Space out content a bit */
 
-.right {
-  margin-left: 1em;
+.tags-div {
+  display: inline-block;
+}
+
+.checkbox-public, .test-name-input, .password-input {
+    margin: 0 1em 0 0 !important;
+}
+
+.difficulty-input {
+    margin: 0 !important;
+}
+
+.description-input {
+    resize: none;
+    width: 100% !important;
+}
+
+.question-input {
+    width: 100%;
+}
+
+.margin-top {
+    margin-top: 1em;
 }
 
 body {
