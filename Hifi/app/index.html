@@ -24,7 +24,7 @@
   <![endif]-->
 
   <div class="container">
-    <div ng-include src="'src/header/header.html'">
+    <div ng-include src="'src/view/header.html'">
     </div>
     <div ng-view>
     </div>
@@ -41,9 +41,16 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/ng-tags-input/ng-tags-input.js"></script>
+
+  <script src="src/utils.js"></script>
+
   <script src="generated/app.js"></script>
-  <script src="generated/header/header.js"></script>
-  <script src="generated/view1/view1.js"></script>
+
+  <script src="generated/controller/testEdit.js"></script>
+  <script src="generated/controller/header.js"></script>
+
+  <script src="generated/service/test.js"></script>
+
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
