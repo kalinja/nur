@@ -1,0 +1,49 @@
+<div class="well" ng-controller="TestEditController as tec">
+    <form class="form-horizontal">
+        <div class="form-inline">
+            <input type="text" class="form-control input-sm test-name-input" placeholder="Název Testu" value="{{tec.test.name}}">
+            <div class="checkbox checkbox-public">
+                <label>
+                    <input type="checkbox" checked="{{tec.test.public}}"> Veřejný
+                </label>
+            </div>
+            <div class="form-group password-input">
+                <button type="button" class="btn btn-default form-control">Nastavit Heslo</button>
+            </div>
+            <div class="form-group difficulty-input">
+                <label for="select">Obtížnost: {{tec.test.difficulty == 3}}</label>
+                <select id="select" class="form-control input-sm" ng-model="tec.selectedDifficulty" ng-options="option as option for option in tec.difficulties" ng-change="tec.updateDifficulty()">
+                </select>
+            </div>
+        </div>
+        <textarea class="form-control description-input margin-top" rows="10" placeholder="Popis Testu">{{tec.test.description}}</textarea>
+        <div class="clearfix"></div>
+
+        <div class="well margin-top" ng-repeat="question in tec.test.questions" ng-init="prevIndex = $index">
+            <textarea class="form-control description-input" rows="3" placeholder="Text otázky">{{question.text}}</textarea>
+            <div ng-if="question.type == 'simple-select'">
+                <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
+                <span class="input-group-addon">
+                  <input type="radio" name="{{'radio' + prevIndex}}">
+                </span>
+                    <input type="text" class="form-control " placeholder="Špatná odpověď 1" value="{{answer.text}}">
+                    <span class="input-group-btn"><button class="btn btn-default" type="button" ng-click="tec.removeAnswer(prevIndex, $index)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Odebrat</button></span>
+                </div>
+            </div>
+            <button type="button" class="btn btn-default margin-top"  ng-click="tec.addAnswer($index)">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Přidat odpověď
+            </button>
+            <button class="btn btn-default pull-right margin-top" type="button" ng-click="tec.removeQuestion(prevIndex)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Odebrat otázku</button>
+        </div>
+        <div class="btn-group margin-top">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Přidat otázku <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li ng-repeat="qType in tec.questionTypes"><a href ng-click="tec.addQuestion(qType.type)">{{qType.name}}</a></li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+        <button type="button" class="btn btn-default margin-top">Uložit a dokončit</button>
+    </form>
+</div>
