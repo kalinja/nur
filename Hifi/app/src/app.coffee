@@ -21,6 +21,9 @@ angular.module('Selftest.routeConfig', ['ngRoute'])
             .when('/testEdit:currentTest', {
                 templateUrl: '/app/src/view/testEdit.html'
             })
+            .when('/testPage', {
+            templateUrl: '/app/src/view/testPage.html'
+            })
             # .when('/category/:currentCategory', {
             #      templateUrl: '/assets/partials/categories.html'
             # })

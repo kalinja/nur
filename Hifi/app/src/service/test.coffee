@@ -34,6 +34,26 @@ class TestService
                   },
                 ]
             }
+            ,
+            {
+              type: "list-select",
+              text: "Hlavní město ČR?",
+              answers:
+                [
+                  {
+                    correct: true,
+                    text: "Praha",
+                  },
+                  {
+                    correct: false,
+                    text: "Brno",
+                  },
+                  {
+                    correct: false,
+                    text: "Ostrava",
+                  },
+                ]
+            }
           ]
       }
     ]
