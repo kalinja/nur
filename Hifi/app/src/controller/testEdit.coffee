@@ -36,10 +36,18 @@ class TestEditController
       {
         "type": "simple-select",
         "name": "Výběr jedné správné odpovědi"
-      }
+      },
       {
         "type": "list-select",
         "name": "Výběr jedné správné odpovědi ze seznamu"
+      },
+      {
+        "type": "multi-select",
+        "name": "Výběr několika správných odpovědí"
+      },
+      {
+        "type": "open-answer",
+        "name": "Otázka s otevřenou odpovědí"
       }
     ]
 

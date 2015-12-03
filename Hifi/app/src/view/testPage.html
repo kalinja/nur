@@ -16,7 +16,7 @@
         <div class="clearfix"></div>
 
         <div class="well margin-top" ng-repeat="question in tec.test.questions" ng-init="prevIndex = $index">
-            <textarea class="form-control description-input" rows="3" placeholder="Text otázky">{{question.text}}</textarea>
+            <div class="form-control description-input">{{question.text}}</div>
             <div ng-if="question.type == 'simple-select'">
                 <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                 <span class="input-group-addon">
@@ -34,7 +34,20 @@
                         {{answer.text}}
                     </option>
                 </select>
+            </div>
+            <div ng-if="question.type == 'multi-select'">
+                <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
+                    <span class="input-group-addon">
+                        <input type="checkbox" name="{{'chbox' + prevIndex}}" id="{{'chbox' + $index}}">
+                    </span>
+                    <label for="{{'chbox' + $index}}" class="form-control ">{{answer.text}}</label>
 
+                </div>
+            </div>
+            <div ng-if="question.type == 'open-answer'">
+                <div class="margin-top question-input">
+                    <label for="answer" class="form-control ">Odpověď:</label>
+                    <input type="text" class="form-control" id="answer" value="">
                 </div>
             </div>
            </div>

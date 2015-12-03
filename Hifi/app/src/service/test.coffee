@@ -36,22 +36,54 @@ class TestService
             }
             ,
             {
-              type: "list-select",
-              text: "Hlavní město ČR?",
+            type: "list-select",
+            text: "Hlavní město ČR?",
+            answers:
+              [
+                {
+                  correct: true,
+                  text: "Praha",
+                },
+                {
+                  correct: false,
+                  text: "Brno",
+                },
+                {
+                  correct: false,
+                  text: "Ostrava",
+                },
+              ]
+          }
+          ,
+            {
+              type: "multi-select",
+              text: "NPC problém je?",
               answers:
                 [
                   {
                     correct: true,
-                    text: "Praha",
+                    text: "Podmnožina NPH",
+                  },
+                  {
+                    correct: true,
+                    text: "podmnožina NP",
                   },
                   {
                     correct: false,
-                    text: "Brno",
+                    text: "podmonožina N",
                   },
+                ]
+            }
+            ,
+            {
+              type: "open-answer",
+              text: "Co je smyslem života?",
+              answers:
+                [
                   {
-                    correct: false,
-                    text: "Ostrava",
-                  },
+                    correct: true,
+                    text: "42",
+                  }
                 ]
             }
           ]
