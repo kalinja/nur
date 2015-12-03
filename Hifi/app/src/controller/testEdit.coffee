@@ -9,6 +9,8 @@ class TestEditController
     @difficulties = @getDifficulties()
     @selectedDifficulty = @getSelectedDifficulty()
     @questionTypes = @getQuestionTypes()
+    @updatePasswordButtonText()
+
 
   getDifficulties: () ->
     [
@@ -55,5 +57,39 @@ class TestEditController
 
   toDashedName: (name) ->
     removeDiacritics(nameto.LowerCase()).replace(/\W+/g, " ").replace(/\s+/g, '-')
+
+  passwordButtonClick: () ->
+    myTest = @test
+    me = this
+    if @test.password == null
+      BootstrapDialog.show(
+        {
+          message: 'Your most favorite fruit: <input type="text" class="form-control">'
+
+          onhide: (dialogRef) ->
+
+          buttons: [{
+                      label: 'Nastavit heslo',
+                      action: (dialogRef) ->
+                        myTest.password = dialogRef.getModalBody().find('input').val()
+                        me.updatePasswordButtonText()
+                        dialogRef.close()
+                    },
+                    {
+                      label: 'Zrušit',
+                      action: (dialogRef) ->
+                        dialogRef.close()
+                    }
+          ]
+        }
+      )
+    else
+      myTest.password = null
+
+  updatePasswordButtonText: () ->
+    if @test.password == null
+      @passwordButtonText = "Nastavit heslo"
+    else
+      @passwordButtonText = "Zrušit heslo"
 
 controllersModule.controller('TestEditController', TestEditController)

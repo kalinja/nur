@@ -11,7 +11,7 @@
               </label>
           </div>
           <div class="form-group password-input">
-              <button type="button" class="btn btn-default form-control">Nastavit Heslo</button>
+              <button type="button" class="btn btn-default form-control" ng-click="tec.passwordButtonClick()">{{tec.passwordButtonText}}</button>
           </div>
           <div class="form-group difficulty-input">
               <label for="select">Obtížnost: {{tec.test.difficulty == 3}}</label>

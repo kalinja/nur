@@ -49,6 +49,9 @@ class TestService
       questions: []
     }
 
+  numToDifficulty: () ->
+
+
   getTests: () ->
     @$log.debug "getTests()"
     @tests

@@ -16,6 +16,7 @@
     "angular-ui-bootstrap": "latest",
     "angular-bootstrap": "latest",
     "jquery": "^2.1.4",
-    "ng-tags-input": "latest"
+    "ng-tags-input": "latest",
+    "bootstrap3-dialog": "latest"
   }
 }
