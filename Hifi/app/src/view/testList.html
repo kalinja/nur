@@ -1,0 +1,21 @@
+
+<div class="panel-group" id="accordion" ng-controller="TestListController as tlc">
+    <div class="panel panel-default" ng-repeat="test in tlc.tests">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                {{test.name}}
+                <a href="#" ng-click="isCollapsed = !isCollapsed" class="panel-title pull-right">
+                    <span ng-if="isCollapsed" class="glyphicon glyphicon-arrow-up"></span>
+                    <span ng-if="!isCollapsed" class="glyphicon glyphicon-arrow-down"></span> </a>
+            </h4>
+
+        </div>
+        <div collapse="!isCollapsed" class="panel-collapse collapse">
+            <div class="panel-body">{{test.description}}</div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>&copy; FIT ČVUT 2015 - such questions, many answers, wow</p>
+</footer>
