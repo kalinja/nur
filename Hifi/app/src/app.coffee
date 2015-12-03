@@ -20,8 +20,9 @@ angular.module('Selftest.routeConfig', ['ngRoute'])
             })
             .when('/testEdit:currentTest', {
                 templateUrl: '/app/src/view/testEdit.html'
-            })
-            .when('/', {
+            }).when('/testPage', {
+                templateUrl: '/app/src/view/testPage.html'
+            }).when('/', {
                 templateUrl: '/app/src/view/testList.html'
             })
             # .when('/category/:currentCategory', {
