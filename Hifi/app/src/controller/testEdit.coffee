@@ -35,6 +35,10 @@ class TestEditController
         "type": "simple-select",
         "name": "Výběr jedné správné odpovědi"
       }
+      {
+        "type": "list-select",
+        "name": "Výběr jedné správné odpovědi ze seznamu"
+      }
     ]
 
   addQuestion: (selType) ->
