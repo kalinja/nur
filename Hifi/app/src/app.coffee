@@ -23,6 +23,8 @@ angular.module('Selftest.routeConfig', ['ngRoute'])
                 templateUrl: '/app/src/view/testEdit.html'
             }).when('/testPage', {
                 templateUrl: '/app/src/view/testPage.html'
+            }).when('/testResult', {
+                templateUrl: '/app/src/view/testResult.html'
             }).when('/', {
                 templateUrl: '/app/src/view/testList.html'
             })

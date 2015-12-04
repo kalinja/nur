@@ -99,6 +99,16 @@ body {
   margin-top: 28px;
 }
 
+/*Test result page*/
+
+.correct {
+  background-color:rgba(0,204,0,0.3);
+}
+
+.incorrect {
+  background-color:rgba(204,0,0,0.4);
+}
+
 /* Responsive: Portrait tablets and up */
 
 @media screen and (min-width: 768px) {
