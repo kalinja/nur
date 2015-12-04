@@ -28,9 +28,10 @@
             </div>
             <div ng-if="question.type == 'list-select'">
                 <select>
+                    <option value="-1">Vyberte odpověď</option>
                     <option
                             ng-repeat="answer in question.answers"
-                            value="{{operator.value}}">
+                            value="{{$index}}">
                         {{answer.text}}
                     </option>
                 </select>
@@ -38,9 +39,9 @@
             <div ng-if="question.type == 'multi-select'">
                 <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                     <span class="input-group-addon">
-                        <input type="checkbox" name="{{'chbox' + prevIndex}}" id="{{'chbox' + $index}}">
+                        <input type="checkbox" name="{{'q' + '$prevIndex'+ 'a' + $index}}" id="{{'q' + '$prevIndex'+ 'a' + $index}}">
                     </span>
-                    <label for="{{'chbox' + $index}}" class="form-control ">{{answer.text}}</label>
+                    <label for="{{'q' + '$prevIndex'+ 'a' + $index}}" class="form-control ">{{answer.text}}</label>
 
                 </div>
             </div>
