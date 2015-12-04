@@ -1,17 +1,28 @@
 
 <div class="panel-group" id="accordion" ng-controller="TestListController as tlc">
     <div class="panel panel-default" ng-repeat="test in tlc.tests">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                {{test.name}}
-                <a href ng-click="isCollapsed = !isCollapsed" class="panel-title pull-right">
-                    <span ng-if="isCollapsed" class="glyphicon glyphicon-arrow-up"></span>
-                    <span ng-if="!isCollapsed" class="glyphicon glyphicon-arrow-down"></span> </a>
-            </h4>
-
+        <div class="panel-heading row">
+            <a href ng-click="isCollapsed = !isCollapsed" class="panel-title col-sm-12">
+                <h4 class="panel-title">
+                    {{test.name}}
+                    <span ng-if="isCollapsed" class="glyphicon glyphicon-arrow-up pull-right"></span>
+                    <span ng-if="!isCollapsed" class="glyphicon glyphicon-arrow-down pull-right"></span>
+                    <img src="res/rating.png"  class="panel-title pull-right"/>
+                </h4>
+            </a>
         </div>
-        <div uib-collapse="!isCollapsed" class="panel-collapse collapse">
-            <div class="panel-body">{{test.description}}</div>
+        <div uib-collapse="!isCollapsed" class="panel-collapse collapse container-fluid">
+            <div class="panel-body row">
+                <div class="card pull-left col-sm-8">
+                    {{test.description}}
+                </div>
+                <div class="pull-right col-sm-4">
+                    <div class="card">
+                        some awesome parameters
+                    </div>
+                    <button type="button" class="btn btn-default form-control" ng-click="tlc.runTest(test)">{{tlc.runBtnText}}</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
