@@ -20,6 +20,11 @@
     width: 100% !important;
 }
 
+.description {
+  width: 100% !important;
+  min-height: 80px;
+}
+
 .question-input {
     width: 100%;
 }

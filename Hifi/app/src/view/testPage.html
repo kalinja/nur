@@ -16,18 +16,18 @@
         <div class="clearfix"></div>
 
         <div class="well margin-top" ng-repeat="question in tec.test.questions" ng-init="prevIndex = $index">
-            <div class="form-control description-input">{{question.text}}</div>
+            <div class="form-control description">{{question.text}}</div>
             <div ng-if="question.type == 'simple-select'">
                 <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                 <span class="input-group-addon">
-                  <input type="radio" name="{{'radio' + prevIndex}}" id="{{'radio' + $index}}">
+                  <input type="radio" name="{{'answer' + prevIndex}}" id="{{'answer' + $index}}">
                 </span>
-                    <label for="{{'radio' + $index}}" class="form-control ">{{answer.text}}</label>
+                    <label for="{{'answer' + $index}}" class="form-control ">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
 
                 </div>
             </div>
             <div ng-if="question.type == 'list-select'">
-                <select>
+                <select id="{{'answer' + $index}}">
                     <option value="-1">Vyberte odpověď</option>
                     <option
                             ng-repeat="answer in question.answers"
@@ -41,14 +41,14 @@
                     <span class="input-group-addon">
                         <input type="checkbox" name="{{'q' + '$prevIndex'+ 'a' + $index}}" id="{{'q' + '$prevIndex'+ 'a' + $index}}">
                     </span>
-                    <label for="{{'q' + '$prevIndex'+ 'a' + $index}}" class="form-control ">{{answer.text}}</label>
+                    <label for="{{'q' + '$prevIndex'+ 'a' + $index}}" class="form-control ">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
 
                 </div>
             </div>
             <div ng-if="question.type == 'open-answer'">
-                <div class="margin-top question-input">
-                    <label for="answer" class="form-control ">Odpověď:</label>
-                    <input type="text" class="form-control" id="answer" value="">
+                <div class="margin-top">
+                    <label for="answer{{$index}}" class="">Odpověď:</label>
+                    <input type="text" class="" style="width: 60%" id="answer{{$index}}" value="">
                 </div>
             </div>
            </div>
