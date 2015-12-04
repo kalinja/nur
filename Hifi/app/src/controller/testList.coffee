@@ -2,12 +2,10 @@ class TestListController
   constructor: (@$log, @TestService, @$routeParams, @$scope) ->
     @$log.debug "constructing TestListController"
     @tests = @getSampleTests()
+    @runBtnText = "Spustit"
 
-  isCollapsed: (test) ->
-    collapseSafe = test.collapsed
-
-    collapseSafe
-
+  runTest: (test) ->
+    @$log.debug "Run test " + test.name
 
   getSampleTests: () ->
     @$log.debug "calling get sample tests"
@@ -15,7 +13,7 @@ class TestListController
       {
         "name": "Test 1"
         "description": "Test 1 awesome description is here!!"
-        "collapsed": true
+        "collapsed": false
       },
       {
         "name": "Test 2"
