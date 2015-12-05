@@ -5,8 +5,8 @@
     <div class="panel panel-default" ng-repeat="test in hc.tests" id="test{{$index}}">
         <div class="panel-heading row">
             <h4 class="panel-title col-sm-12">
-                <a href ng-click="isCollapsed = !isCollapsed" class="panel-title">{{test.name}}</a>
-                <a href ng-click="isCollapsed = !isCollapsed" class="panel-title">
+                <a href ng-click="isCollapsed = !isCollapsed">{{test.name}}</a>
+                <a href ng-click="isCollapsed = !isCollapsed">
                     <span ng-if="isCollapsed" class="glyphicon glyphicon-arrow-up pull-right"></span>
                     <span ng-if="!isCollapsed" class="glyphicon glyphicon-arrow-down pull-right"></span>
                 </a>
