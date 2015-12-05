@@ -50,9 +50,6 @@ class TestEditController
     answers = @test.questions[@test.questions.indexOf(question)].answers
     answers.splice(answers.indexOf(answer), 1)
 
-  toDashedName: (name) ->
-    removeDiacritics(nameto.LowerCase()).replace(/\W+/g, " ").replace(/\s+/g, '-')
-
   passwordButtonClick: () ->
     myTest = @test
     me = this
@@ -60,10 +57,11 @@ class TestEditController
     if @test.password == null
       BootstrapDialog.show(
         {
-          message: 'Your most favorite fruit: <input type="text" class="form-control">'
-
+          message: '<label>Zvolte heslo: <input type="password" class="form-control"> </label>'
           onhide: (dialogRef) ->
 
+          type: "type-default"
+          title: 'Nastavení testu hesla'
           buttons: [{
                       label: 'Nastavit heslo',
                       action: (dialogRef) ->

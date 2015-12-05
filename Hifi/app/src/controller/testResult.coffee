@@ -68,6 +68,7 @@ class TestResultController
 
         onhide: (dialogRef) ->
 
+        type: "type-default"
         buttons: [{
           label: 'Odeslat',
           action: (dialogRef) ->

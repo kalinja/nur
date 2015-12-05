@@ -19,6 +19,7 @@ class MyTestListController
     scope = @$scope
     BootstrapDialog.show({
       title: 'Warning'
+      type: "type-default"
       message: 'Opravdu chcete smazat tento test?'
       buttons: [{
         label: 'Ano',

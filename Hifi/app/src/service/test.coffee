@@ -133,7 +133,11 @@ class TestService
 
   save: (test) ->
     idx = @tests.indexOf(@getTest(test.id))
-    @tests[idx] = test
+    if idx == -1
+      test.id = @toDashedName(test.name)
+      @tests.push(test)
+    else
+      @tests[idx] = test
 
   getDifficulties: () ->
     [
@@ -143,5 +147,8 @@ class TestService
       "Obtížný",
       "Velmi Obtížný",
     ]
+
+  toDashedName: (name) ->
+    removeDiacritics(nameto.LowerCase()).replace(/\W+/g, " ").replace(/\s+/g, '-')
 
 servicesModule.service('TestService', TestService)

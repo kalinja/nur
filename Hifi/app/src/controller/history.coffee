@@ -20,6 +20,7 @@ class HistoryController
     scope = @$scope
     BootstrapDialog.show({
       title: 'Warning'
+      type: "type-default"
       message: 'Opravdu chcete smazat historii tohoto testu?'
       buttons: [{
         label: 'Ano',
@@ -45,6 +46,7 @@ class HistoryController
     scope = @$scope
     BootstrapDialog.show({
       title: 'Warning'
+      type: "type-default"
       message: 'Opravdu chcete smazat celou historii?'
       buttons: [{
         label: 'Ano',
