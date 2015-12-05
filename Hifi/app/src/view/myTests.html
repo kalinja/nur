@@ -1,5 +1,6 @@
-<div class="panel-group" id="accordion" ng-controller="TestListController as tlc">
-    <div class="panel panel-default" ng-repeat="test in tlc.tests">
+
+<div class="panel-group" id="accordion" ng-controller="MyTestListController as mtlc">
+    <div class="panel panel-default" ng-repeat="test in mtlc.tests" id="test{{$index}}">
         <div class="panel-heading row">
             <h4 class="panel-title col-sm-12">
                 <a href ng-click="isCollapsed = !isCollapsed" class="panel-title">{{test.name}}</a>
@@ -8,7 +9,10 @@
                     <span ng-if="!isCollapsed" class="glyphicon glyphicon-arrow-down pull-right"></span>
                 </a>
                 <img src="res/rating.png" class="panel-title pull-right"/>
+                <button type="button" class="btn btn-default btn-sm pull-right col-sm-2" ng-click="mtlc.editTest(test)">{{mtlc.editBtnText}}</button>
+                <button type="button" class="btn btn-default btn-sm pull-right col-sm-2" ng-click="mtlc.deleteTest($index)">{{mtlc.deleteBtnText}}</button>
             </h4>
+
         </div>
         <div uib-collapse="!isCollapsed" class="panel-collapse collapse container-fluid">
             <div class="panel-body row">
@@ -19,9 +23,7 @@
                     <div class="card">
                         some awesome parameters
                     </div>
-                    <button type="button" class="btn btn-default form-control" ng-click="tlc.runTest(test)">
-                        {{tlc.runBtnText}}
-                    </button>
+                    <button type="button" class="btn btn-default form-control" ng-click="mtlc.runTest(test)">{{mtlc.runBtnText}}</button>
                 </div>
             </div>
         </div>
