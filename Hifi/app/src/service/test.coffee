@@ -1,7 +1,10 @@
 class TestService
   constructor: (@$log, @$http, @$q) ->
     @$log.debug "constructing TestService"
-    @tests = @getTempTest()
+    @tests = @clone(@getTempTest())
+
+  clone: (obj) ->
+    JSON.parse(JSON.stringify(obj))
 
   getTempTest: () ->
     [
@@ -95,19 +98,50 @@ class TestService
       questions: []
     }
 
-  numToDifficulty: () ->
-
+  getQuestionTypes: () ->
+    [
+      {
+        "type": "simple-select",
+        "name": "Výběr jedné správné odpovědi"
+      },
+      {
+        "type": "list-select",
+        "name": "Výběr jedné správné odpovědi ze seznamu"
+      },
+      {
+        "type": "multi-select",
+        "name": "Výběr několika správných odpovědí"
+      },
+      {
+        "type": "open-answer",
+        "name": "Otázka s otevřenou odpovědí"
+      }
+    ]
 
   getTests: () ->
-    @$log.debug "getTests()"
-    @tests
+    copyOfTests = []
+    for i in @tests
+      copyOfTests.push @clone(i)
+    copyOfTests
 
   getTest: (id) ->
     @$log.log("Hello")
     for test in @tests
       if test.id == id
-        return test
+        return @clone(test)
     null
 
+  save: (test) ->
+    idx = @tests.indexOf(@getTest(test.id))
+    @tests[idx] = test
+
+  getDifficulties: () ->
+    [
+      "Snadný",
+      "Mírně obtížný",
+      "Středně obtížný",
+      "Obtížný",
+      "Velmi Obtížný",
+    ]
 
 servicesModule.service('TestService', TestService)
