@@ -36,10 +36,18 @@ class TestEditController
       {
         "type": "simple-select",
         "name": "Výběr jedné správné odpovědi"
-      }
+      },
       {
         "type": "list-select",
         "name": "Výběr jedné správné odpovědi ze seznamu"
+      },
+      {
+        "type": "multi-select",
+        "name": "Výběr několika správných odpovědí"
+      },
+      {
+        "type": "open-answer",
+        "name": "Otázka s otevřenou odpovědí"
       }
     ]
 
@@ -65,6 +73,7 @@ class TestEditController
   passwordButtonClick: () ->
     myTest = @test
     me = this
+    scope = @$scope
     if @test.password == null
       BootstrapDialog.show(
         {
@@ -77,6 +86,7 @@ class TestEditController
                       action: (dialogRef) ->
                         myTest.password = dialogRef.getModalBody().find('input').val()
                         me.updatePasswordButtonText()
+                        scope.$apply()
                         dialogRef.close()
                     },
                     {
@@ -89,6 +99,7 @@ class TestEditController
       )
     else
       myTest.password = null
+      @updatePasswordButtonText()
 
   updatePasswordButtonText: () ->
     if @test.password == null

@@ -15,19 +15,21 @@ app = angular.module('Selftest', dependencies)
 angular.module('Selftest.routeConfig', ['ngRoute'])
     .config ($routeProvider) ->
         $routeProvider
-            .when('/testEdit', {
+            .when('/testList', {
+                templateUrl: '/app/src/view/testList.html'
+            }).when('/testEdit', {
                 templateUrl: '/app/src/view/testEdit.html'
-            })
-            .when('/testEdit:currentTest', {
+            }).when('/testEdit:currentTest', {
                 templateUrl: '/app/src/view/testEdit.html'
-            })
-            .when('/testPage', {
-            templateUrl: '/app/src/view/testPage.html'
+            }).when('/testPage', {
+                templateUrl: '/app/src/view/testPage.html'
+            }).when('/', {
+                templateUrl: '/app/src/view/testList.html'
             })
             # .when('/category/:currentCategory', {
             #      templateUrl: '/assets/partials/categories.html'
             # })
-            .otherwise({redirectTo: '/testEdit'})
+            .otherwise({redirectTo: '/'})
     .config ($locationProvider) ->
         $locationProvider.html5Mode({
             enabled: false,
