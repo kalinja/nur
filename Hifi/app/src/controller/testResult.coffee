@@ -1,12 +1,41 @@
 class TestResultController
-  constructor: (@$log, @TestService, @$routeParams, @$scope) ->
+  constructor: (@$log, @TestService, @$routeParams, @$scope, @$location) ->
     @$log.debug "constructing TestResultController"
     if (@$routeParams.currentTest)
-      @test = @TestService.getTest(@$routeParams.currentTest)
+      @test = @TestService.getTest(@$routeParams.test)
     else
       @test = @TestService.getTest("nazev-testovaciho-testu")
 
+    @loc = @$location
+
   answerLetter: (i) ->
     String.fromCharCode((i%26)+97)
+
+  closeTest: () ->
+    @loc.path("/")
+
+  repeatTest: () ->
+    @loc.search('test', @test.name ).path("testPage")
+
+  showTestRater: ()->
+    BootstrapDialog.show(
+      {
+        message: "Ohodnoťte tento test. Vaše hodnocení pomůže dalším uživatelům."
+
+        onhide: (dialogRef) ->
+
+        buttons: [{
+          label: 'Odeslat',
+          action: (dialogRef) ->
+            dialogRef.close()
+        },
+          {
+            label: 'Zrušit',
+            action: (dialogRef) ->
+              dialogRef.close()
+          }
+        ]
+      }
+    )
 
 controllersModule.controller('TestResultController', TestResultController)
