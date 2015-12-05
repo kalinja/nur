@@ -6,7 +6,7 @@ class TestPageController
     else
       @test = @TestService.getTest("nazev-testovaciho-testu")
     @completed = 40
-
+    @loc = @$location
     @answers = new Array()
 
   answerLetter: (i) ->
@@ -14,6 +14,7 @@ class TestPageController
 
   submit: () ->
     console.log('Value',@answers)
+    @loc.path('/testResult')
 
 
 
