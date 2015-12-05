@@ -7,9 +7,6 @@ class HistoryController
     @editBtnText = "Editovat"
     @deleteBtnText = "Smazat"
 
-  clearAllHistory: () ->
-
-
   runTest: (test) ->
     @$log.debug "Run test " + test.name
     window.location.href = "#/testPage"
@@ -32,6 +29,32 @@ class HistoryController
           tests[index].maxScore = 0
           tests[index].lastScore = 0
           tests[index].noHistory = true
+          dialogRef.close()
+          scope.$apply()
+      },
+        {
+          label: 'Ne',
+          action: (dialogRef) ->
+            dialogRef.close()
+        }
+      ]
+    })
+
+  clearAllHistory: () ->
+    tests = @tests
+    scope = @$scope
+    BootstrapDialog.show({
+      title: 'Warning'
+      message: 'Opravdu chcete smazat celou historii?'
+      buttons: [{
+        label: 'Ano',
+        action: (dialogRef) ->
+          for i, test of tests
+            test.rating = 0
+            test.runCount = 0
+            test.maxScore = 0
+            test.lastScore = 0
+            test.noHistory = true
           dialogRef.close()
           scope.$apply()
       },
