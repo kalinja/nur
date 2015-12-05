@@ -10,6 +10,17 @@ class TestEditController
     @selectedDifficulty = @getSelectedDifficulty()
     @questionTypes = @TestService.getQuestionTypes()
     @updatePasswordButtonText()
+    @registerOnEvents()
+
+  registerOnEvents: () ->
+    thiz = this
+    @$scope.$on("$destroy", (event, args) ->
+      thiz.$scope.$emit("testBeingEditedStop", null)
+    )
+
+  onInit: () ->
+    @$log.debug "emitting"
+    @$scope.$emit("testBeingEdited", null)
 
   updateDifficulty: () ->
     index = 0

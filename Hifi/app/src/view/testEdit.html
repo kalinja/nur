@@ -1,7 +1,7 @@
 
 
 
-  <div class="well" ng-controller="TestEditController as tec">
+  <div class="well" ng-controller="TestEditController as tec" ng-init="tec.onInit()">
     <form class="form-horizontal">
       <div class="form-inline">
           <input type="text" class="form-control input-sm test-name-input" placeholder="Název Testu" value="{{tec.test.name}}">
