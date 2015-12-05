@@ -20,6 +20,11 @@
     width: 100% !important;
 }
 
+.description {
+  width: 100% !important;
+  min-height: 80px;
+}
+
 .question-input {
     width: 100%;
 }
@@ -63,6 +68,20 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
+.card{
+  border: 1px solid gray;
+  box-shadow: 1px 1px 3px #888;
+  min-height: 60px;
+  padding: 10px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
 /* Customize container */
 
 @media (min-width: 768px) {
@@ -92,6 +111,16 @@ body {
 }
 .marketing p + h4 {
   margin-top: 28px;
+}
+
+/*Test result page*/
+
+.correct {
+  background-color:rgba(0,204,0,0.3);
+}
+
+.incorrect {
+  background-color:rgba(204,0,0,0.4);
 }
 
 /* Responsive: Portrait tablets and up */
