@@ -1,5 +1,5 @@
 class TestResultController
-  constructor: (@$log, @TestService, @$routeParams, @$scope, @$location) ->
+  constructor: (@$log, @TestService, @$routeParams, @$scope, @$location, @ResultService) ->
     @$log.debug "constructing TestResultController"
     if (@$routeParams.currentTest)
       @test = @TestService.getTest(@$routeParams.test)
@@ -7,6 +7,8 @@ class TestResultController
       @test = @TestService.getTest("nazev-testovaciho-testu")
 
     @loc = @$location
+    @answers = @ResultService.getData()
+    @$log.debug @answers
 
   answerLetter: (i) ->
     String.fromCharCode((i%26)+97)
