@@ -6,6 +6,7 @@ class TestListController
 
   runTest: (test) ->
     @$log.debug "Run test " + test.name
+    window.location.href = "#/testPage"
 
   getSampleTests: () ->
     @$log.debug "calling get sample tests"
