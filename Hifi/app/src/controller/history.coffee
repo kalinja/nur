@@ -6,6 +6,7 @@ class HistoryController
     @clearAllBtnText = "Smazat celou historii"
     @editBtnText = "Editovat"
     @deleteBtnText = "Smazat"
+    @correctAnswersBtnText = "Správné výsledky"
 
   runTest: (test) ->
     @$log.debug "Run test " + test.name
@@ -67,6 +68,10 @@ class HistoryController
         }
       ]
     })
+
+    showCorrectAnswers: () ->
+      @$log.debug "Show correct answers"
+      window.location.href = "#/testResult"
 
   getSampleTests: () ->
     @$log.debug "calling get sample tests"

@@ -26,6 +26,7 @@
                         <br/>Maximum: {{test.maxScore}}%
                         <br/>Naposled: {{test.lastScore}}%
                     </div>
+                    <button type="button" class="btn btn-default form-control" ng-click="hc.showCorrectAnswers()">{{hc.correctAnswersBtnText}}</button>
                     <button type="button" class="btn btn-default form-control" ng-click="hc.deleteHistory(hc.tests.indexOf(test))">{{hc.deleteBtnText}}</button>
                     <button type="button" class="btn btn-default form-control" ng-click="hc.runTest(test)">{{hc.runBtnText}}</button>
                 </div>
