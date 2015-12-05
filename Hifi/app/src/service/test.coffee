@@ -137,6 +137,10 @@ class TestService
         return @clone(test)
     null
 
+  save: (test) ->
+    idx = @tests.indexOf(@getTest(test.id))
+    @tests[idx] = test
+
   getDifficulties: () ->
     [
       "Snadný",

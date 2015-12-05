@@ -1,5 +1,5 @@
 class TestEditController
-  constructor: (@$log, @TestService, @$routeParams, @$scope) ->
+  constructor: (@$log, @TestService, @$routeParams, @$location, @$scope) ->
     @$log.debug "constructing TestEditController"
     if (@$routeParams.currentTest)
       @test = @TestService.getTest(@$routeParams.currentTest)
@@ -78,5 +78,9 @@ class TestEditController
       @passwordButtonText = "Nastavit heslo"
     else
       @passwordButtonText = "Zrušit heslo"
+
+  saveAndFinish: () ->
+    @TestService.save(@test)
+    @$location.path("/")
 
 controllersModule.controller('TestEditController', TestEditController)
