@@ -1,6 +1,6 @@
-class MyTestListController
+class HistoryController
   constructor: (@$log, @TestService, @$routeParams, @$scope, @$location) ->
-    @$log.debug "constructing MyTestListController"
+    @$log.debug "constructing HistoryController"
     @tests = @getSampleTests()
     @runBtnText = "Spustit"
     @editBtnText = "Editovat"
@@ -24,7 +24,7 @@ class MyTestListController
         action: (dialogRef) ->
           tests.splice(index, 1)
           dialogRef.close()
-          @$scope.apply()
+#@$scope.apply()
       },
         {
           label: 'Ne',
@@ -59,4 +59,4 @@ class MyTestListController
       }
     ]
 
-controllersModule.controller('MyTestListController', MyTestListController)
+controllersModule.controller('HistoryController', HistoryController)
