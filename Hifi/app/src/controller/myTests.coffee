@@ -16,6 +16,7 @@ class MyTestListController
 
   deleteTest: (index) ->
     tests = @tests
+    scope = @$scope
     BootstrapDialog.show({
       title: 'Warning'
       message: 'Opravdu chcete smazat tento test?'
@@ -24,7 +25,7 @@ class MyTestListController
         action: (dialogRef) ->
           tests.splice(index, 1)
           dialogRef.close()
-          @$scope.apply()
+          scope.$apply()
       },
         {
           label: 'Ne',

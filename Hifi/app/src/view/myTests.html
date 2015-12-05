@@ -10,7 +10,7 @@
                 </a>
                 <img src="res/rating.png" class="panel-title pull-right"/>
                 <button type="button" class="btn btn-default btn-sm pull-right col-sm-2" ng-click="mtlc.editTest(test)">{{mtlc.editBtnText}}</button>
-                <button type="button" class="btn btn-default btn-sm pull-right col-sm-2" ng-click="mtlc.deleteTest($index)">{{mtlc.deleteBtnText}}</button>
+                <button type="button" class="btn btn-default btn-sm pull-right col-sm-2" ng-click="mtlc.deleteTest(mtlc.tests.indexOf(test))">{{mtlc.deleteBtnText}}</button>
             </h4>
 
         </div>

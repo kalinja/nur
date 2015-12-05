@@ -6,7 +6,7 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <h4>Dokončeno! Úspěšnost: 0% (0/{{tec.test.questions.length}})</h4>
+            <h4>Dokončeno! Úspěšnost: {{tec.correctCount/tec.test.questions.length*100}}% ({{tec.correctCount}}/{{tec.test.questions.length}})</h4>
         </div>
         <div class="form-inline ">
             <button type="button" class="btn btn-default form-control" ng-click="tec.closeTest()">Zavřít test</button>
@@ -22,7 +22,7 @@
             <div ng-if="question.type == 'simple-select'">
                 <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                 <span class="input-group-addon">
-                  <input type="radio" name="{{'answer' + prevIndex}}" id="{{'answer' + $index}}" disabled>
+                  <input type="radio" name="{{'answer' + prevIndex}}" id="{{'answer' + $index}}" disabled ng-checked="tec.answers[prevIndex].value == $index.toString()">
                 </span>
                     <label for="{{'answer' + $index}}" class="form-control ">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
 
@@ -31,7 +31,7 @@
             <div ng-if="question.type == 'list-select'">
                 <div class="margin-top">
                     <label for="answer{{$index}}" class="">Odpověď:</label>
-                    <select id="{{'answer' + $index}}" style="width: 30%" disabled>
+                    <select id="{{'answer' + $index}}" style="width: 30%" disabled ng-model="tec.answers[$index].value" class="{{tec.style($index)}}">
                         <option
                                 ng-repeat="answer in question.answers"
                                 value="{{$index}}">
@@ -44,16 +44,16 @@
             <div ng-if="question.type == 'multi-select'">
                 <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                     <span class="input-group-addon">
-                        <input type="checkbox" name="{{'q' + '$prevIndex'+ 'a' + $index}}" id="{{'q' + '$prevIndex'+ 'a' + $index}}" disabled>
+                        <input type="checkbox" name="{{'q' + '$prevIndex'+ 'a' + $index}}" id="{{'q' + '$prevIndex'+ 'a' + $index}}" disabled ng-checked="tec.answers[prevIndex].values[$index]">
                     </span>
                     <label for="{{'q' + '$prevIndex'+ 'a' + $index}}" class="form-control ">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
 
                 </div>
             </div>
             <div ng-if="question.type == 'open-answer'">
-                <div class="margin-top incorrect">
+                <div class="margin-top">
                     <label for="answer{{$index}}" class="">Odpověď:</label>
-                    <input type="text" class="" style="width: 60%" id="answer{{$index}}" value="">
+                    <input type="text" class="{{tec.style($index)}}" style="width: 60%" id="answer{{$index}}"  ng-model="tec.answers[$index].value" disabled>
                 </div>
             </div>
         </div>

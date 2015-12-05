@@ -81,13 +81,7 @@ class TestService
             {
               type: "open-answer",
               text: "Co je smyslem života?",
-              answers:
-                [
-                  {
-                    correct: true,
-                    text: "42",
-                  }
-                ]
+              answer: "42"
             }
           ]
       }
