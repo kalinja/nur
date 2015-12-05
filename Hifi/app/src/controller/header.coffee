@@ -39,6 +39,9 @@ class HeaderController
       thiz.saveButtonEnabled = false
       )
 
+  saveTest: () ->
+    @$scope.$broadcast("saveTest", null)
+
   updateSaveButtonText: () ->
     if @saveButtonSaved
       @saveButtonText = "Uloženo"

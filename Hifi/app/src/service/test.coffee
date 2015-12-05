@@ -149,6 +149,6 @@ class TestService
     ]
 
   toDashedName: (name) ->
-    removeDiacritics(nameto.LowerCase()).replace(/\W+/g, " ").replace(/\s+/g, '-')
+    removeDiacritics(name.toLowerCase()).replace(/\W+/g, " ").replace(/\s+/g, '-')
 
 servicesModule.service('TestService', TestService)

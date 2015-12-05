@@ -1,10 +1,10 @@
 
 
 
-  <div class="well" ng-controller="TestEditController as tec" ng-init="tec.onInit()">
+  <div class="well" ng-controller="TestEditController as tec" ng-init="tec.onInit()" ng-model="tec.test" ng-change="tec.onChange()">
     <form class="form-horizontal">
       <div class="form-inline">
-          <input type="text" class="form-control input-sm test-name-input" placeholder="Název Testu" value="{{tec.test.name}}">
+          <input type="text" class="form-control input-sm test-name-input" placeholder="Název Testu" ng-model="test.name">
           <div class="checkbox checkbox-public">
               <label>
                   <input type="checkbox" checked="{{tec.test.public}}"> Veřejný
@@ -19,17 +19,17 @@
               </select>
           </div>
       </div>
-      <textarea class="form-control description-input margin-top" rows="10" placeholder="Popis Testu">{{tec.test.description}}</textarea>
+      <textarea class="form-control description-input margin-top" rows="10" placeholder="Popis Testu" ng-model="test.description"></textarea>
       <div class="clearfix"></div>
 
       <div class="well margin-top" ng-repeat="question in tec.test.questions">
-          <textarea class="form-control description-input" rows="3" placeholder="Text otázky">{{question.text}}</textarea>
+          <textarea class="form-control description-input" rows="3" placeholder="Text otázky" ng-model="question.text"></textarea>
           <div ng-if="question.type == 'simple-select'">
             <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                 <span class="input-group-addon">
                   <input type="radio" name="{{'radio' + prevIndex}}">
                 </span>
-                <input type="text" class="form-control " placeholder="Špatná odpověď 1" value="{{answer.text}}">
+                <input type="text" class="form-control " placeholder="Špatná odpověď 1" ng-model="answer.text">
                 <span class="input-group-btn"><button class="btn btn-default" type="button" ng-click="tec.removeAnswer(question, answer)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Odebrat</button></span>
             </div>
           </div>

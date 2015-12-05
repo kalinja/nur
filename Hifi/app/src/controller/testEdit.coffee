@@ -14,9 +14,26 @@ class TestEditController
 
   registerOnEvents: () ->
     thiz = this
+    @$scope.test = @test
     @$scope.$on("$destroy", (event, args) ->
       thiz.$scope.$emit("testBeingEditedStop", null)
     )
+    @$scope.$on("saveTest", (event, args) ->
+      thiz.save()
+    )
+    @$scope.$watch("test", () ->
+        thiz.onChange()
+      , true)
+
+  onChange: () ->
+    @$scope.$emit("testChanged", null)
+
+  save: () ->
+    @TestService.save(@test)
+    @onSaved()
+
+  onSaved: () ->
+    @$scope.$emit("testSaved", null)
 
   onInit: () ->
     @$log.debug "emitting"
@@ -61,7 +78,7 @@ class TestEditController
           onhide: (dialogRef) ->
 
           type: "type-default"
-          title: 'Nastavení testu hesla'
+          title: 'Nastavení hesla testu'
           buttons: [{
                       label: 'Nastavit heslo',
                       action: (dialogRef) ->
