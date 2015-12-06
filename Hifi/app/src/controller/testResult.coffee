@@ -8,6 +8,7 @@ class TestResultController
 
     @loc = @$location
     @answers = @ResultService.getData()
+    @showCorrect = @ResultService.showAllCorrect()
     if(@answers == undefined)
       @answers = new Array(@test.questions.length)
     @correctCount = @countCorrect()
@@ -24,6 +25,8 @@ class TestResultController
     return correct
 
   isCorrect: (questionIndex) ->
+    if @showCorrect
+      return true
     if(@answers[questionIndex] == undefined)
       return false
     if(@test.questions[questionIndex].type == "open-answer")
@@ -46,8 +49,6 @@ class TestResultController
         else if(@answers[questionIndex].values[i] == true && @test.questions[questionIndex].answers[i].correct == false)
           return false
       return true
-
-
 
   style: (questionIndex, answeri=0) ->
     if(@test.questions[questionIndex].type == "open-answer" || @test.questions[questionIndex].type == "list-select")
