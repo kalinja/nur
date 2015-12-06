@@ -24,7 +24,7 @@
                 <span class="input-group-addon">
                   <input type="radio" name="{{'answer' + prevIndex}}" id="{{'answer' + $index}}" disabled ng-checked="tec.answers[prevIndex].value == $index.toString()">
                 </span>
-                    <label for="{{'answer' + $index}}" class="form-control ">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
+                    <label for="{{'answer' + $index}}" class="form-control {{tec.style(prevIndex,$index)}}">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
 
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     <span class="input-group-addon">
                         <input type="checkbox" name="{{'q' + '$prevIndex'+ 'a' + $index}}" id="{{'q' + '$prevIndex'+ 'a' + $index}}" disabled ng-checked="tec.answers[prevIndex].values[$index]">
                     </span>
-                    <label for="{{'q' + '$prevIndex'+ 'a' + $index}}" class="form-control ">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
+                    <label for="{{'q' + '$prevIndex'+ 'a' + $index}}" class="form-control {{tec.style(prevIndex,$index)}}">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
 
                 </div>
             </div>

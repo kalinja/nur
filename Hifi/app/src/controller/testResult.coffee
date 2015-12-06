@@ -32,8 +32,11 @@ class TestResultController
       idx = parseInt(@answers[questionIndex].value)
       return (idx >= 0 && @test.questions[questionIndex].answers[idx].correct == true)
     else if(@test.questions[questionIndex].type == "simple-select")
-      idx = parseInt(@answers[questionIndex].value)
-      return @test.questions[questionIndex].answers[idx].correct == true
+      if(@answers[questionIndex].value == undefined)
+        idx = -1
+      else
+        idx = parseInt(@answers[questionIndex].value)
+      return (idx >= 0 && @test.questions[questionIndex].answers[idx].correct == true)
     else if(@test.questions[questionIndex].type == "multi-select")
       for i in [0..@test.questions[questionIndex].answers.length-1]
         if(@answers[questionIndex].values[i] == undefined && @test.questions[questionIndex].answers[i].correct)
@@ -52,7 +55,18 @@ class TestResultController
         return "correct"
       else
         return "incorrect"
-
+    else if(@test.questions[questionIndex].type == "simple-select")
+      if(@isCorrect(questionIndex) && answeri==parseInt(@answers[questionIndex].value))
+        return "correct"
+      else if(!@isCorrect(questionIndex) && @test.questions[questionIndex].answers[answeri].correct)
+        return "incorrect"
+    else if(@test.questions[questionIndex].type == "multi-select")
+      if(@test.questions[questionIndex].answers[answeri].correct==false && (@answers[questionIndex] == undefined || undefined==@answers[questionIndex].values[answeri] || false==@answers[questionIndex].values[answeri]))
+        return "correct"
+      if(@answers[questionIndex] != undefined && undefined!=@answers[questionIndex].values[answeri] && @test.questions[questionIndex].answers[answeri].correct==@answers[questionIndex].values[answeri])
+        return "correct"
+      else
+        return "incorrect"
     return ""
 
   closeTest: () ->
