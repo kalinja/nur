@@ -1,8 +1,9 @@
 class TestListController
-  constructor: (@$log, @TestService, @$routeParams, @$scope) ->
+  constructor: (@$log, @TestService, @$routeParams, @$scope, @ResultService) ->
     @$log.debug "constructing TestListController"
     @tests = @getSampleTests()
     @runBtnText = "Spustit"
+    @ResultService.clear()
 
   runTest: (test) ->
     @$log.debug "Run test " + test.name

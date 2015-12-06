@@ -12,6 +12,10 @@ class ResultService
   makeShowCorrect: () ->
     @showCorrect = true
 
+  clear: () ->
+    @data = null
+    @showCorrect = false
+
   showAllCorrect: () ->
     @showCorrect
 
