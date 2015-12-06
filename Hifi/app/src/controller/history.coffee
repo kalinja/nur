@@ -1,12 +1,13 @@
 class HistoryController
-  constructor: (@$log, @TestService, @$routeParams, @$scope, @$location) ->
+  constructor: (@$log, @TestService, @$routeParams, @$scope, @$location, @ResultService) ->
     @$log.debug "constructing HistoryController"
     @tests = @getSampleTests()
     @runBtnText = "Spustit"
     @clearAllBtnText = "Smazat celou historii"
     @editBtnText = "Editovat"
     @deleteBtnText = "Smazat"
-    @correctAnswersBtnText = "Správné výsledky"
+    @correctAnswersBtnText = "Spravne vysledky"
+    @result = @ResultService
 
   runTest: (test) ->
     @$log.debug "Run test " + test.name
@@ -69,9 +70,10 @@ class HistoryController
       ]
     })
 
-    showCorrectAnswers: () ->
-      @$log.debug "Show correct answers"
-      window.location.href = "#/testResult"
+  showCorrectAnswers: () ->
+    @$log.debug "Show correct answers"
+    @result.makeShowCorrect()
+    @$location.path('/testResult')
 
   getSampleTests: () ->
     @$log.debug "calling get sample tests"
