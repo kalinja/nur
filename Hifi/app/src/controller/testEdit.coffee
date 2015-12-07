@@ -61,7 +61,16 @@ class TestEditController
   addAnswer: (question) ->
     idx = @test.questions.indexOf(question)
     switch @test.questions[idx].type
-      when "simple-select" then @test.questions[idx].answers.push({ correct: false, text: "" })
+      when "simple-select" then @addSimpleAnswer(idx)
+      when "list-select" then @addSimpleAnswer(idx)
+      when "multi-select" then @addSimpleAnswer(idx)
+
+  addSimpleAnswer: (idx) ->
+    newAnswer = { "correct": false, "text": "" }
+    if @test.questions[idx].answers.length == 0
+      newAnswer["correct"] = true
+    @$log.debug "newAnswer[correct]: #{newAnswer["correct"]}"
+    @test.questions[idx].answers.push(newAnswer)
 
   removeAnswer: (question, answer) ->
     answers = @test.questions[@test.questions.indexOf(question)].answers
