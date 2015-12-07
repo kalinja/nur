@@ -20,6 +20,9 @@
           </div>
       </div>
       <textarea class="form-control description-input margin-top" rows="10" placeholder="Popis Testu" ng-model="test.description"></textarea>
+      <tags-input ng-model="tec.test.tags" placeholder="Přidejte/Odeberte štítky">
+
+      </tags-input>
       <div class="clearfix"></div>
 
       <div class="well margin-top" ng-repeat="question in tec.test.questions">

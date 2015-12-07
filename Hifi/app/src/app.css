@@ -3,6 +3,14 @@
 
 /* Space out content a bit */
 
+.save-create-offset-1-less {
+  margin-left: -3.0%;
+}
+
+.save-create-offset-1-more {
+  margin-left: 2.0%;
+}
+
 .tags-div {
   display: inline-block;
 }

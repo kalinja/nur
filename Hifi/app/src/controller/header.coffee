@@ -1,20 +1,7 @@
 class HeaderController
-  constructor: (@$log, @TestService, @$routeParams, @$scope) ->
+  constructor: (@$log, @TestService, @$routeParams, @$location, @$scope) ->
       @$log.debug "constructing HeaderController"
-      @tags = [{
-        text: 'just'
-      }, {
-        text: 'some'
-      }, {
-        text: 'cool'
-      }, {
-        text: 'tags'
-      }]
-      @items = [
-        'The first choice!',
-        'And another choice for you.',
-        'but wait! A third!'
-      ]
+      @$scope.tags = []
       @status = isopen: false
       @saveButtonEnabled = false
       @saveButtonSaved = false
@@ -38,6 +25,12 @@ class HeaderController
     @$scope.$on('testBeingEditedStop', (event, args) ->
       thiz.saveButtonEnabled = false
       )
+    @$scope.$watch("tags", () ->
+        thiz.onTagsChange()
+      , true)
+
+  onTagsChange: () ->
+    @$scope.$broadcast("filterByTags", @$scope.tags)
 
   saveTest: () ->
     @$scope.$broadcast("saveTest", null)
@@ -49,7 +42,16 @@ class HeaderController
       @saveButtonText = "Uložit"
 
   loadTags: (query) ->
-    ["hello"]
+    tags = []
+    for test in @TestService.getTests()
+      for tag in test.tags
+        if typeof tag is 'string'
+          tags.push(tag)
+        else
+          @$log.debug("tag:#{tag["text"]}")
+          if tag["text"] != null
+            tags.push(tag["text"])
+    tags.unique()
 
   toggled: (open) ->
     @$log.log('Dropdown is now: ', open);
@@ -58,5 +60,8 @@ class HeaderController
     $event.preventDefault();
     $event.stopPropagation();
     @status.isopen = !@status.isopen;
+
+  newTest: () ->
+    @$location.path("/testEdit")
 
 controllersModule.controller('HeaderController', HeaderController)
