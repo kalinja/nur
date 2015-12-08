@@ -9,6 +9,10 @@ class TestPageController
     @loc = @$location
     @answers = new Array()
     @res = @ResultService
+    location = @$location
+    @$scope.$on('filterByTags', (event, args) ->
+      location.path('/')
+    )
 
   answerLetter: (i) ->
     String.fromCharCode((i%26)+97)

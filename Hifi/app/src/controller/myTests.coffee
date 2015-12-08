@@ -5,6 +5,10 @@ class MyTestListController
     @runBtnText = "Spustit"
     @editBtnText = "Editovat"
     @deleteBtnText = "Smazat"
+    location = @$location
+    @$scope.$on('filterByTags', (event, args) ->
+      location.path('/')
+    )
 
   runTest: (test) ->
     @$log.debug "Run test " + test.name
@@ -12,7 +16,7 @@ class MyTestListController
 
   editTest: (test) ->
     @$log.debug "Edit test " + test.name
-    window.location.href = "#/testEdit"
+    @$location.search('currentTest', 'nazev-testovaciho-testu' ).path("testEdit")
 
   deleteTest: (index) ->
     tests = @tests
@@ -38,27 +42,6 @@ class MyTestListController
 
   getSampleTests: () ->
     @$log.debug "calling get sample tests"
-    [
-      {
-        "name": "Test 1"
-        "description": "Test 1 awesome description is here!!"
-        "collapsed": false
-      },
-      {
-        "name": "Test 2"
-        "description": "Test 2 awesome description is here!!"
-        "collapsed": true
-      },
-      {
-        "name": "Test 3"
-        "description": "Test 3 awesome description is here!!"
-        "collapsed": true
-      },
-      {
-        "name": "Test 4"
-        "description": "Test 4 awesome description is here!!"
-        "collapsed": true
-      }
-    ]
+    @TestService.getTests()
 
 controllersModule.controller('MyTestListController', MyTestListController)

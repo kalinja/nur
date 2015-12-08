@@ -5,8 +5,8 @@ class TestEditController
     if (@$routeParams.currentTest)
       @test = @TestService.getTest(@$routeParams.currentTest)
     else
-      #@test = @TestService.newTest()
-      @test = @TestService.getTest("nazev-testovaciho-testu")
+      @test = @TestService.newTest()
+      #@test = @TestService.getTest("nazev-testovaciho-testu")
     @difficulties = @TestService.getDifficulties()
     @selectedDifficulty = @getSelectedDifficulty()
     @questionTypes = @TestService.getQuestionTypes()
@@ -26,6 +26,10 @@ class TestEditController
     @$scope.$watch("test", () ->
         thiz.onChange()
       , true)
+    location = @$location
+    @$scope.$on('filterByTags', (event, args) ->
+      location.path('/')
+    )
 
   onChange: () ->
     @$scope.$emit("testChanged", null)
