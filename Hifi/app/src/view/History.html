@@ -3,7 +3,7 @@
         <button type="button" class="btn btn-default " ng-click="hc.clearAllHistory()">{{hc.clearAllBtnText}}</button>
     </div>
     <div class="panel panel-default" ng-repeat="test in hc.tests" id="test{{$index}}">
-        <div class="panel-heading row">
+        <div class="panel-heading row rowHistory">
             <h4 class="panel-title col-sm-12">
                 <a href ng-click="isCollapsed = !isCollapsed">{{test.name}}</a>
                 <a href ng-click="isCollapsed = !isCollapsed">

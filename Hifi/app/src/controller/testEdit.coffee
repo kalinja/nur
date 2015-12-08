@@ -1,6 +1,7 @@
 class TestEditController
   constructor: (@$log, @TestService, @$routeParams, @$location, @$scope) ->
     @$log.debug "constructing TestEditController"
+    @hiddenAnswers = []
     if (@$routeParams.currentTest)
       @test = @TestService.getTest(@$routeParams.currentTest)
     else
@@ -11,6 +12,7 @@ class TestEditController
     @questionTypes = @TestService.getQuestionTypes()
     @updatePasswordButtonText()
     @registerOnEvents()
+    @updateHiddenAnswers()
 
   registerOnEvents: () ->
     thiz = this
@@ -54,9 +56,11 @@ class TestEditController
       "type": selType,
       answers: []
     })
+    @updateHiddenAnswers()
 
   removeQuestion: (question) ->
     @test.questions.splice(@test.questions.indexOf(question), 1)
+    @updateHiddenAnswers()
 
   addAnswer: (question) ->
     idx = @test.questions.indexOf(question)
@@ -117,5 +121,18 @@ class TestEditController
   saveAndFinish: () ->
     @TestService.save(@test)
     @$location.path("/")
+
+  updateHiddenAnswers: () ->
+    @hiddenAnswers.splice(0,@hiddenAnswers.length)
+    idx = 0
+    for question in @test.questions
+      if question.type == "open-answer"
+        @hiddenAnswers[idx] =
+        {
+          "visibility": "hidden"
+        }
+      else
+        { }
+      idx++
 
 controllersModule.controller('TestEditController', TestEditController)
