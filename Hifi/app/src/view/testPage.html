@@ -3,12 +3,14 @@
         <div class="col-md-6">
             <h3>{{tec.test.name}}</h3>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-2 text-right"><div style="margin-top: 24px; margin-bottom: 10px;"><b>Dokončeno:</b></div></div>
+        <div class="col-md-4">
+            <div style="margin-top: 24px; margin-bottom: 10px;">
             <div class="progress">
-                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{tec.completed}}"
-                     aria-valuemin="0" aria-valuemax="100" style="width:{{tec.completed}}%">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0"
+                     aria-valuemin="0" aria-valuemax="100" style="width:0%">
                 </div>
-                <span>Dokončeno: {{tec.completed}}%</span>
+                    </div>
             </div>
              </div>
         </div>
@@ -20,18 +22,17 @@
             <div ng-if="question.type == 'simple-select'">
                 <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                 <span class="input-group-addon">
-                  <input type="radio" name="{{'answer' + prevIndex}}" id="{{'answer' + $index}}" ng-model="tec.answers[prevIndex].value" value="{{$index}}">
+                  <input type="radio" name="{{'answer' + prevIndex}}" id="{{'answer' + $index}}" ng-model="tec.answers[prevIndex].value" value="{{$index}}" ng-change="tec.countAnswers()">
                 </span>
                     <label for="{{'answer' + $index}}" class="form-control ">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
 
                 </div>
             </div>
-            <div ng-if="question.type == 'list-select'" ng-init="tec.answers[$index].value='-1'">
+            <div ng-if="question.type == 'list-select'">
                 <div class="margin-top row">
                     <div class="col-md-6">
                     <label for="answer{{$index}}" class="">Odpověď:</label>
-                        <select id="{{'answer' + $index}}" style="width: 75%" ng-model="tec.answers[$index].value">
-                            <option value="-1"></option>
+                        <select id="{{'answer' + $index}}" style="width: 75%" ng-model="tec.answers[$index].value" ng-change="tec.countAnswers()">
                             <option
                                 ng-repeat="answer in question.answers"
                                 value="{{$index}}">
@@ -48,7 +49,7 @@
                 <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                     <span class="input-group-addon">
                         <input type="checkbox" name="{{'q' + '$prevIndex'+ 'a' + $index}}" id="{{'q' + '$prevIndex'+ 'a' + $index}}"
-                               ng-model="tec.answers[prevIndex].values[$index]" ng-true-value="true" ng-false-value="false">
+                               ng-model="tec.answers[prevIndex].values[$index]" ng-true-value="true" ng-false-value="false" ng-change="tec.countAnswers()">
                     </span>
                     <label for="{{'q' + '$prevIndex'+ 'a' + $index}}" class="form-control ">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
 
@@ -58,7 +59,7 @@
                 <div class="margin-top row">
                     <div class="col-md-6">
                         <label for="answer{{$index}}" class="">Odpověď:</label>
-                        <input type="text" class="" style="width: 75%" id="answer{{$index}}" value="" ng-model="tec.answers[$index].value">
+                        <input type="text" class="" style="width: 75%" id="answer{{$index}}" value="" ng-model="tec.answers[$index].value" ng-change="tec.countAnswers()">
                     </div>
                     <div class="col-md-6">
                     </div>
