@@ -12,6 +12,10 @@ class TestPageController
     @$scope.answers = @answers
     console.log('Value',@answers.length)
     @res = @ResultService
+    location = @$location
+    @$scope.$on('filterByTags', (event, args) ->
+      location.path('/')
+    )
 
   answerLetter: (i) ->
     String.fromCharCode((i%26)+97)

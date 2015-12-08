@@ -26,6 +26,10 @@ class TestEditController
     @$scope.$watch("test", () ->
         thiz.onChange()
       , true)
+    location = @$location
+    @$scope.$on('filterByTags', (event, args) ->
+      location.path('/')
+    )
 
   onChange: () ->
     @$scope.$emit("testChanged", null)

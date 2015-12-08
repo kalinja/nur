@@ -8,6 +8,10 @@ class HistoryController
     @deleteBtnText = "Smazat"
     @correctAnswersBtnText = "Spravne vysledky"
     @result = @ResultService
+    location = @$location
+    @$scope.$on('filterByTags', (event, args) ->
+      location.path('/')
+    )
 
   runTest: (test) ->
     @$log.debug "Run test " + test.name
