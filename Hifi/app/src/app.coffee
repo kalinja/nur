@@ -16,21 +16,21 @@ angular.module('Selftest.routeConfig', ['ngRoute'])
 .config ($routeProvider) ->
   $routeProvider
   .when('/testList', {
-      templateUrl: '/app/src/view/testList.html'
+      templateUrl: './src/view/testList.html'
     }).when('/testEdit', {
-      templateUrl: '/app/src/view/testEdit.html'
+      templateUrl: './src/view/testEdit.html'
     }).when('/testEdit:currentTest', {
-      templateUrl: '/app/src/view/testEdit.html'
+      templateUrl: './src/view/testEdit.html'
     }).when('/testPage', {
-      templateUrl: '/app/src/view/testPage.html'
+      templateUrl: './src/view/testPage.html'
     }).when('/testResult', {
-      templateUrl: '/app/src/view/testResult.html'
+      templateUrl: './src/view/testResult.html'
     }).when('/', {
-      templateUrl: '/app/src/view/testList.html'
+      templateUrl: './src/view/testList.html'
     }).when('/myTests', {
-      templateUrl: '/app/src/view/myTests.html'
+      templateUrl: './src/view/myTests.html'
     }).when('/history', {
-      templateUrl: '/app/src/view/history.html'
+      templateUrl: './src/view/history.html'
     })
 # .when('/category/:currentCategory', {
 #      templateUrl: '/assets/partials/categories.html'
