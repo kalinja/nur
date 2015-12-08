@@ -103,4 +103,25 @@ class TestResultController
       }
     )
 
+  showQuestionReport: ()->
+    BootstrapDialog.show(
+      {
+        message: "<div style='margin-bottom: 20px;'>Co je podle vás s otázkou špatně?</div><div class='row'><div class='col-md-12'><textarea class='form-control description-input' rows='3'></textarea></div></div>"
+
+        onhide: (dialogRef) ->
+        title: "Nahlášení otázky"
+        type: "type-default"
+        buttons: [{
+          label: 'Odeslat',
+          action: (dialogRef) ->
+            dialogRef.close()
+        },
+          {
+            label: 'Zrušit',
+            action: (dialogRef) ->
+              dialogRef.close()
+          }
+        ]
+      }
+    )
 controllersModule.controller('TestResultController', TestResultController)
