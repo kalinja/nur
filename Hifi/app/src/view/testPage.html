@@ -27,16 +27,20 @@
                 </div>
             </div>
             <div ng-if="question.type == 'list-select'" ng-init="tec.answers[$index].value='-1'">
-                <div class="margin-top">
+                <div class="margin-top row">
+                    <div class="col-md-6">
                     <label for="answer{{$index}}" class="">Odpověď:</label>
-                    <select id="{{'answer' + $index}}" style="width: 30%" ng-model="tec.answers[$index].value">
-                        <option value="-1"></option>
-                        <option
+                        <select id="{{'answer' + $index}}" style="width: 75%" ng-model="tec.answers[$index].value">
+                            <option value="-1"></option>
+                            <option
                                 ng-repeat="answer in question.answers"
                                 value="{{$index}}">
-                            {{answer.text}}
-                        </option>
-                    </select>
+                                {{answer.text}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
                 </div>
 
             </div>
@@ -51,9 +55,13 @@
                 </div>
             </div>
             <div ng-if="question.type == 'open-answer'">
-                <div class="margin-top">
-                    <label for="answer{{$index}}" class="">Odpověď:</label>
-                    <input type="text" class="" style="width: 60%" id="answer{{$index}}" value="" ng-model="tec.answers[$index].value">
+                <div class="margin-top row">
+                    <div class="col-md-6">
+                        <label for="answer{{$index}}" class="">Odpověď:</label>
+                        <input type="text" class="" style="width: 75%" id="answer{{$index}}" value="" ng-model="tec.answers[$index].value">
+                    </div>
+                    <div class="col-md-6">
+                    </div>
                 </div>
             </div>
            </div>

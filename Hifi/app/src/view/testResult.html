@@ -29,15 +29,20 @@
                 </div>
             </div>
             <div ng-if="question.type == 'list-select'">
-                <div class="margin-top">
+                <div class="margin-top row">
+                    <div class="col-md-6">
                     <label for="answer{{$index}}" class="">Odpověď:</label>
-                    <select id="{{'answer' + $index}}" style="width: 30%" disabled ng-model="tec.answers[$index].value" class="{{tec.style($index)}}">
+                    <select id="{{'answer' + $index}}" style="width: 75%" disabled ng-model="tec.answers[$index].value" class="{{tec.style($index)}}">
                         <option
                                 ng-repeat="answer in question.answers"
                                 value="{{$index}}">
                             {{answer.text}}
                         </option>
                     </select>
+                    </div>
+                    <div class="col-md-6">
+                        <span ng-if="!tec.isCorrect($index)"><label>Správně:</label>&nbsp;{{tec.correctAnswerText($index)}}</span>
+                    </div>
                 </div>
 
             </div>
@@ -51,9 +56,14 @@
                 </div>
             </div>
             <div ng-if="question.type == 'open-answer'">
-                <div class="margin-top">
-                    <label for="answer{{$index}}" class="">Odpověď:</label>
-                    <input type="text" class="{{tec.style($index)}}" style="width: 60%" id="answer{{$index}}"  ng-model="tec.answers[$index].value" disabled>
+                <div class="margin-top row">
+                    <div class="col-md-6">
+                        <label for="answer{{$index}}" class="">Odpověď:</label>
+                        <input type="text" class="{{tec.style($index)}}" style="width:75%" id="answer{{$index}}"  ng-model="tec.answers[$index].value" disabled>
+                    </div>
+                    <div class="col-md-6">
+                        <span ng-if="!tec.isCorrect($index)"><label>Správně:</label>&nbsp;{{question.answer}}</span>
+                    </div>
                 </div>
             </div>
         </div>

@@ -70,6 +70,11 @@ class TestResultController
         return "incorrect"
     return ""
 
+  correctAnswerText: (questionIndex) ->
+    for answer in @test.questions[questionIndex].answers
+      if(answer.correct == true)
+        return answer.text
+
   closeTest: () ->
     @loc.path("/")
 
