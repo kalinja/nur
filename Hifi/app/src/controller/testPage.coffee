@@ -6,8 +6,11 @@ class TestPageController
     else
       @test = @TestService.getTest("nazev-testovaciho-testu")
     @completed = 40
+    thiz = this
     @loc = @$location
     @answers = new Array()
+    @$scope.answers = @answers
+    console.log('Value',@answers.length)
     @res = @ResultService
 
   answerLetter: (i) ->
@@ -17,6 +20,14 @@ class TestPageController
     @res.setData(@answers)
     console.log('Value',@answers)
     @loc.path('/testResult')
+
+  countAnswers: () ->
+    console.log('Tick')
+    console.log('Value',@answers)
+    val = @answers.length/@test.questions.length*100
+    $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
+    return true
+
 
 
 

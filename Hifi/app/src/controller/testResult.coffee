@@ -32,7 +32,10 @@ class TestResultController
     if(@test.questions[questionIndex].type == "open-answer")
       return (@test.questions[questionIndex].answer == @answers[questionIndex].value)
     else if(@test.questions[questionIndex].type == "list-select")
-      idx = parseInt(@answers[questionIndex].value)
+      if(@answers[questionIndex].value == undefined)
+        idx = -1
+      else
+        idx = parseInt(@answers[questionIndex].value)
       return (idx >= 0 && @test.questions[questionIndex].answers[idx].correct == true)
     else if(@test.questions[questionIndex].type == "simple-select")
       if(@answers[questionIndex].value == undefined)
