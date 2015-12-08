@@ -4,6 +4,7 @@ class HeaderController
       @$scope.tags = []
       @status = isopen: false
       @saveButtonEnabled = false
+      @loggedIn = false
       @saveButtonSaved = false
       @updateSaveButtonText()
       @registerOnEvents()
@@ -40,6 +41,12 @@ class HeaderController
       @saveButtonText = "Uloženo"
     else
       @saveButtonText = "Uložit"
+
+  login: () ->
+    @loggedIn = true
+
+  logout: () ->
+    @loggedIn = false
 
   loadTags: (query) ->
     tags = []

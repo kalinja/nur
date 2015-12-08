@@ -80,6 +80,12 @@ body {
   margin-left: 10px !important;
 }
 
+.loginMargin {
+  margin-left: 10px !important;
+  margin-top: 0px !important;
+}
+
+
 .card{
   border: 1px solid gray;
   box-shadow: 1px 1px 3px #888;
