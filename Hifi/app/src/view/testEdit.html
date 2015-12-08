@@ -20,23 +20,56 @@
           </div>
       </div>
       <textarea class="form-control description-input margin-top" rows="10" placeholder="Popis Testu" ng-model="test.description"></textarea>
+      <tags-input ng-model="tec.test.tags" placeholder="Přidejte/Odeberte štítky">
+
+      </tags-input>
       <div class="clearfix"></div>
 
       <div class="well margin-top" ng-repeat="question in tec.test.questions">
           <textarea class="form-control description-input" rows="3" placeholder="Text otázky" ng-model="question.text"></textarea>
+
           <div ng-if="question.type == 'simple-select'">
             <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                 <span class="input-group-addon">
-                  <input type="radio" name="{{'radio' + prevIndex}}">
+                  <input type="radio" name="{{'radio' + prevIndex}}" ng-checked="answer.correct"></input>
                 </span>
-                <input type="text" class="form-control " placeholder="Špatná odpověď 1" ng-model="answer.text">
+                <input type="text" class="form-control " placeholder="Odpověď" ng-model="answer.text"></input>
                 <span class="input-group-btn"><button class="btn btn-default" type="button" ng-click="tec.removeAnswer(question, answer)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Odebrat</button></span>
             </div>
           </div>
-          <button type="button" class="btn btn-default margin-top"  ng-click="tec.addAnswer(question)">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Přidat odpověď
-          </button>
-          <button class="btn btn-default pull-right margin-top" type="button" ng-click="tec.removeQuestion(question)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Odebrat otázku</button>
+
+          <div ng-if="question.type == 'list-select'">
+            <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
+                <span class="input-group-addon">
+                  <input type="radio" name="{{'radio' + prevIndex}}"></input>
+                </span>
+                <input type="text" class="form-control " placeholder="Odpověď" ng-model="answer.text"></input>
+                <span class="input-group-btn"><button class="btn btn-default" type="button" ng-click="tec.removeAnswer(question, answer)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Odebrat</button></span>
+            </div>
+          </div>
+
+          <div ng-if="question.type == 'multi-select'">
+            <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
+                <span class="input-group-addon">
+                  <input type="checkbox" name="{{'checkbox' + prevIndex}}" ng-checked="answer.correct"></input>
+                </span>
+                <input type="text" class="form-control " placeholder="Odpověď" ng-model="answer.text"></input>
+                <span class="input-group-btn"><button class="btn btn-default" type="button" ng-click="tec.removeAnswer(question, answer)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Odebrat</button></span>
+            </div>
+          </div>
+          <div ng-if="question.type == 'open-answer'">
+            <div class="input-group margin-top question-input">
+                <textarea type="text" class="form-control" placeholder="Odpověď" ng-model="question.answer"></textarea>
+            </div>
+          </div>
+
+          <div style="display: inline-block;">
+            <button ng-if="question.type != 'open-answer'" type="button" class="btn btn-default margin-top ng-scope" ng-click="tec.addAnswer(question)">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Přidat odpověď
+            </button>
+            <div class="clearfix"></div>
+            <button class="btn btn-default pull-right margin-top" type="button" ng-click="tec.removeQuestion(question)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Odebrat otázku</button>
+          </div>
         </div>
         <div class="btn-group margin-top">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

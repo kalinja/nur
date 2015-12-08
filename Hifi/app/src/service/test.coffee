@@ -9,31 +9,39 @@ class TestService
   getTempTest: () ->
     [
       {
-        author: "admin",
+        author: "admin"
         id: "nazev-testovaciho-testu"
-        name: "Název testovacího testu",
-        description: "Popis testovacího testu.",
-        public: true,
-        password: null,
-        difficulty: 3,
+        name: "Název testovacího testu"
+        description: "Popis testovacího testu."
+        public: true
+        password: null
+        difficulty: 3
+        tags:
+          [
+            "testovaci",
+            "test",
+            "uzasny",
+            "nejlepsi",
+            "proste bozi"
+          ]
         questions:
           [
             {
-              type: "simple-select",
-              text: "Kolik je 1 + 1?",
+              type: "simple-select"
+              text: "Kolik je 1 + 1?"
               answers:
                 [
                   {
-                    correct: true,
-                    text: "2",
+                    correct: true
+                    text: "2"
                   },
                   {
-                    correct: false,
-                    text: "žirafa",
+                    correct: false
+                    text: "žirafa"
                   },
                   {
-                    correct: false,
-                    text: "c",
+                    correct: false
+                    text: "c"
                   },
                 ]
             }
@@ -134,7 +142,7 @@ class TestService
   save: (test) ->
     idx = @tests.indexOf(@getTest(test.id))
     if idx == -1
-      test.id = @toDashedName(test.name)
+      test.id = toDashedName(test.name)
       @tests.push(test)
     else
       @tests[idx] = test
@@ -147,8 +155,5 @@ class TestService
       "Obtížný",
       "Velmi Obtížný",
     ]
-
-  toDashedName: (name) ->
-    removeDiacritics(name.toLowerCase()).replace(/\W+/g, " ").replace(/\s+/g, '-')
 
 servicesModule.service('TestService', TestService)
