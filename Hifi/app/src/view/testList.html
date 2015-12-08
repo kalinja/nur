@@ -1,6 +1,6 @@
 <div class="panel-group" id="accordion" ng-controller="TestListController as tlc">
     <div class="panel panel-default" ng-repeat="test in tlc.tests">
-        <div class="panel-heading row">
+        <div class="panel-heading row rowTest">
             <h4 class="panel-title col-sm-12">
                 <a href ng-click="isCollapsed = !isCollapsed">{{test.name}}</a>
                 <a href ng-click="isCollapsed = !isCollapsed">
@@ -12,14 +12,14 @@
         </div>
         <div uib-collapse="!isCollapsed" class="panel-collapse collapse container-fluid">
             <div class="panel-body row">
-                <div class="card pull-left col-sm-8">
+                <div class="well pull-left col-sm-8">
                     {{test.description}}
                 </div>
                 <div class="pull-right col-sm-4">
-                    <div class="card">
+                    <div class="well">
                         some awesome parameters
                     </div>
-                    <button type="button" class="btn btn-default form-control" ng-click="tlc.runTest(test)">
+                    <button type="button" class="btn btn-primary form-control" ng-click="tlc.runTest(test)">
                         {{tlc.runBtnText}}
                     </button>
                 </div>

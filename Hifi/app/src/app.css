@@ -94,6 +94,10 @@ body {
   display:         flex;
 }
 
+.rowTest, .rowHistory {
+  margin: 0;
+}
+
 /* Customize container */
 
 @media (min-width: 768px) {

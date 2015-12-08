@@ -3,7 +3,7 @@
         <button type="button" class="btn btn-default " ng-click="hc.clearAllHistory()">{{hc.clearAllBtnText}}</button>
     </div>
     <div class="panel panel-default" ng-repeat="test in hc.tests" id="test{{$index}}">
-        <div class="panel-heading row">
+        <div class="panel-heading row rowHistory">
             <h4 class="panel-title col-sm-12">
                 <a href ng-click="isCollapsed = !isCollapsed">{{test.name}}</a>
                 <a href ng-click="isCollapsed = !isCollapsed">
@@ -16,19 +16,19 @@
         </div>
         <div uib-collapse="!isCollapsed" class="panel-collapse collapse container-fluid">
             <div class="panel-body row">
-                <div class="card pull-left col-sm-8">
+                <div class="well pull-left col-sm-8" style="margin-bottom: 0;">
                     <img ng-if="!test.noHistory" src="res/sample-rating-graph.png" class="panel-title pull-right"/>
                     <img ng-if="test.noHistory" src="res/sample-rating-graph-empty.png" class="panel-title pull-right"/>
                 </div>
                 <div class="pull-right col-sm-4">
-                    <div class="card">
+                    <div class="well" style="margin-bottom: 0;">
                         <br/>Počet spuštění: {{test.runCount}}
                         <br/>Maximum: {{test.maxScore}}%
                         <br/>Naposled: {{test.lastScore}}%
                     </div>
-                    <button type="button" class="btn btn-default form-control" ng-click="hc.showCorrectAnswers()">{{hc.correctAnswersBtnText}}</button>
-                    <button type="button" class="btn btn-default form-control" ng-click="hc.deleteHistory(hc.tests.indexOf(test))">{{hc.deleteBtnText}}</button>
-                    <button type="button" class="btn btn-default form-control" ng-click="hc.runTest(test)">{{hc.runBtnText}}</button>
+                    <button type="button" class="btn btn-default form-control" ng-click="hc.showCorrectAnswers()" style="margin-top: 0.5em;">{{hc.correctAnswersBtnText}}</button>
+                    <button type="button" class="btn btn-default form-control" ng-click="hc.deleteHistory(hc.tests.indexOf(test))" style="margin-top: 0.5em;">{{hc.deleteBtnText}}</button>
+                    <button type="button" class="btn btn-default form-control" ng-click="hc.runTest(test)" style="margin-top: 0.5em;">{{hc.runBtnText}}</button>
                 </div>
             </div>
         </div>
