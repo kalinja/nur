@@ -6,11 +6,8 @@ class TestPageController
     else
       @test = @TestService.getTest("nazev-testovaciho-testu")
     @completed = 40
-    thiz = this
     @loc = @$location
     @answers = new Array()
-    @$scope.answers = @answers
-    console.log('Value',@answers.length)
     @res = @ResultService
 
   answerLetter: (i) ->
