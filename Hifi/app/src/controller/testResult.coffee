@@ -79,10 +79,10 @@ class TestResultController
   showTestRater: ()->
     BootstrapDialog.show(
       {
-        message: "Ohodnoťte tento test. Vaše hodnocení pomůže dalším uživatelům."
+        message: "<div style='margin-bottom: 20px;'>Ohodnoťte tento test. Vaše hodnocení pomůže dalším uživatelům.</div><div class='row'><div class='col-md-3 text-right'>Hodnocení: 0%</div><div class='col-md-6'><input type=range min=0 max=10 value=10 step=1></div><div class='col-md-3'>100%</div></div>"
 
         onhide: (dialogRef) ->
-
+        title: "Hodnocení testu"
         type: "type-default"
         buttons: [{
           label: 'Odeslat',
