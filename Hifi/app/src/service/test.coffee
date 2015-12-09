@@ -112,10 +112,10 @@ class TestService
         "type": "simple-select",
         "name": "Výběr jedné správné odpovědi"
       },
-      {
-        "type": "list-select",
-        "name": "Výběr jedné správné odpovědi ze seznamu"
-      },
+      #{
+       # "type": "list-select",
+       # "name": "Výběr jedné správné odpovědi ze seznamu"
+      #},
       {
         "type": "multi-select",
         "name": "Výběr několika správných odpovědí"
