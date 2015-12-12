@@ -93,6 +93,19 @@ body {
   padding: 10px;
 }
 
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 700px;
+  height: 50px;
+  background-color: white;
+}
+
+.content-margin {
+  margin-top: 50px;
+}
+
 .row {
   display: -webkit-box;
   display: -webkit-flex;

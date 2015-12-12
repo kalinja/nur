@@ -26,9 +26,9 @@
   <![endif]-->
 
   <div class="container" ng-controller="HeaderController as hc">
-    <div ng-include src="'src/view/header.html'">
+    <div ng-include src="'src/view/header.html'" class="fixed-nav-bar">
     </div>
-    <div ng-view>
+    <div ng-view class="content-margin">
     </div>
     <div ng-include src="'src/view/footer.html'">
     </div>
