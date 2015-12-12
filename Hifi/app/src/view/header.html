@@ -1,7 +1,8 @@
-<div class="header navbar">
-  <div class="row">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+  <div class="row"  style="margin-top: 0.5em;">
     <div class="col-md-2">
-      <h3 class="text-muted"><a href="#/">Self-test</a></h3>
+      <p class="navbar-brand"><a href="#/">Self-test</a></p>
     </div>
 
 
@@ -9,7 +10,7 @@
 
 
     <div class="col-md-7">
-      <tags-input ng-model="tags" placeholder="Zadejte štítek">
+      <tags-input ng-model="tags" placeholder="Hledejte štítek">
       <auto-complete source="hc.loadTags($query)"></auto-complete>
       </tags-input>
     </div>
@@ -43,5 +44,5 @@
   </div>
   <!--<div class="tags-div">-->
 
-  <!--</div>-->
-</div>
+  </div>
+</nav>
