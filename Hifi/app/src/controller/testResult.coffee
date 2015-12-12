@@ -106,6 +106,13 @@ class TestResultController
       }
     )
 
+  like: ()->
+    if($('#likebtn').hasClass('btn-primary'))
+      $('#likebtn').removeClass('btn-primary')
+    else
+      $('#likebtn').addClass('btn-primary')
+    return true
+
   showQuestionReport: ()->
     BootstrapDialog.show(
       {

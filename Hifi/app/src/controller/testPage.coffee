@@ -23,8 +23,6 @@ class TestPageController
     @loc.path('/testResult')
 
   countAnswers: () ->
-    console.log('Tick')
-    console.log('Value',@answers)
     val = @answers.length/@test.questions.length*100
     $('.progress-bar').css('width', val+'%').attr('aria-valuenow', val);
     return true
