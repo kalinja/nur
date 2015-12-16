@@ -111,7 +111,16 @@ class TestResultController
       $('#likebtn').removeClass('btn-primary')
     else
       $('#likebtn').addClass('btn-primary')
-    return true
+      if($('#dislikebtn').hasClass('btn-primary'))
+        $('#dislikebtn').removeClass('btn-primary')
+
+  dislike: ()->
+    if($('#dislikebtn').hasClass('btn-primary'))
+      $('#dislikebtn').removeClass('btn-primary')
+    else
+      $('#dislikebtn').addClass('btn-primary')
+      if($('#likebtn').hasClass('btn-primary'))
+        $('#likebtn').removeClass('btn-primary')
 
   showQuestionReport: ()->
     BootstrapDialog.show(
