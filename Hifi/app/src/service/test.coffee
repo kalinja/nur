@@ -135,12 +135,20 @@ class TestService
   getTest: (id) ->
     @$log.log("Hello")
     for test in @tests
-      if test.id == id
+      if test.id.localeCompare(id) == 0
         return @clone(test)
     null
 
+  getTestNoClone: (id) ->
+    @$log.log("Hello")
+    for test in @tests
+      if test.id.localeCompare(id) == 0
+        return test
+    null
+
   save: (test) ->
-    idx = @tests.indexOf(@getTest(test.id))
+    idx = @tests.indexOf(@getTestNoClone(test.id))
+    @$log.log("id: #{test.id} idx: #{idx} @getTest(test.id): #{@getTest(test.id)}")
     if idx == -1
       test.id = toDashedName(test.name)
       @tests.push(test)

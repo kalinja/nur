@@ -124,7 +124,7 @@ class TestEditController
 
   saveAndFinish: () ->
     @TestService.save(@test)
-    @$location.path("/")
+    @$location.path("/myTests")
 
   updateHiddenAnswers: () ->
     @hiddenAnswers.splice(0,@hiddenAnswers.length)
