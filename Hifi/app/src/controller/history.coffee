@@ -36,6 +36,7 @@ class HistoryController
           tests[index].maxScore = 0
           tests[index].lastScore = 0
           tests[index].noHistory = true
+          tests.splice(index, 1)
           dialogRef.close()
           scope.$apply()
       },
@@ -57,12 +58,7 @@ class HistoryController
       buttons: [{
         label: 'Ano',
         action: (dialogRef) ->
-          for i, test of tests
-            test.rating = 0
-            test.runCount = 0
-            test.maxScore = 0
-            test.lastScore = 0
-            test.noHistory = true
+          tests.splice(0, tests.length)
           dialogRef.close()
           scope.$apply()
       },
