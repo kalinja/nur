@@ -45,7 +45,7 @@
                     </select>
                     </div>
                     <div class="col-md-6">
-                        <span ng-if="!tec.isCorrect($index)"><label>Správně:</label>&nbsp;{{tec.correctAnswerText($index)}}</span>
+                        <span ng-if="!tec.isCorrect($index)" style="background: lightgreen"><label>Správně:</label>&nbsp;{{tec.correctAnswerText($index)}}</span>
                     </div>
                 </div>
 
@@ -66,7 +66,7 @@
                         <input type="text" class="{{tec.style($index)}}" style="width:75%" id="answer{{$index}}"  ng-model="tec.answers[$index].value" disabled>
                     </div>
                     <div class="col-md-6">
-                        <span ng-if="!tec.isCorrect($index)"><label>Správně:</label>&nbsp;{{question.answer}}</span>
+                        <span ng-if="!tec.isCorrect($index)" style="background: lightgreen"><label>Správně:</label>&nbsp;{{question.answer}}</span>
                     </div>
                 </div>
             </div>
