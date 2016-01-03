@@ -17,6 +17,9 @@ class TestResultController
   answerLetter: (i) ->
     String.fromCharCode((i%26)+97)
 
+  percent: () ->
+    Math.round(@correctCount/@test.questions.length*100)
+
   countCorrect: () ->
     correct = 0
     for i in [0..@test.questions.length-1]

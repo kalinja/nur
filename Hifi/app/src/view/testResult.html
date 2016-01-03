@@ -6,7 +6,7 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <h4>Dokončeno! Úspěšnost: {{tec.correctCount/tec.test.questions.length*100}}% ({{tec.correctCount}}/{{tec.test.questions.length}})</h4>
+            <h4>Dokončeno! Úspěšnost: {{tec.percent()}}% ({{tec.correctCount}}/{{tec.test.questions.length}})</h4>
         </div>
         <div class="col-md-6">
         <div class="form-inline pull-right">
@@ -19,7 +19,6 @@
     </div>
     <form class="form-horizontal">
         <div class="clearfix"></div>
-
         <div class="well margin-top" ng-repeat="question in tec.test.questions" ng-init="prevIndex = $index">
             <div class="row"> <div class="col-md-9"></div><div class="col-md-3"><button type="button" class="btn btn-default form-control" ng-click="tec.showQuestionReport()">Nahlásit otázku</button></div></div>
             <div class="form-control description margin-top"><span style="font-weight: bold">{{$index+1}}.</span>&nbsp;{{question.text}}</div>
