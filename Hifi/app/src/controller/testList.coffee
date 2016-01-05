@@ -1,5 +1,5 @@
 class TestListController
-  constructor: (@$log, @TestService, @$routeParams, @$scope, @ResultService) ->
+  constructor: (@$log, @TestService, @$routeParams, @$scope, @ResultService, @$location) ->
     @$log.debug "constructing TestListController"
     @tests = @TestService.getTests()
     @runBtnText = "Spustit"
@@ -35,8 +35,7 @@ class TestListController
         @tests.push(test)
 
   runTest: (test) ->
-    @$log.debug "Run test " + test.name
-    window.location.href = "#/testPage"
+    @$location.search('currentTest', test.id ).path("testPage")
 
   getSampleTests: () ->
     @$log.debug "calling get sample tests"

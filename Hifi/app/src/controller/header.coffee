@@ -74,6 +74,6 @@ class HeaderController
     @status.isopen = !@status.isopen;
 
   newTest: () ->
-    @$location.path("/testEdit")
+    @$location.search('currentTest', null ).path("testEdit")
 
 controllersModule.controller('HeaderController', HeaderController)

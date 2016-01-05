@@ -11,12 +11,10 @@ class MyTestListController
     )
 
   runTest: (test) ->
-    @$log.debug "Run test " + test.name
-    window.location.href = "#/testPage"
+    @$location.search('currentTest', test.id ).path("testPage")
 
   editTest: (test) ->
-    @$log.debug "Edit test " + test.name
-    @$location.search('currentTest', 'nazev-testovaciho-testu' ).path("testEdit")
+    @$location.search('currentTest', test.id ).path("testEdit")
 
   deleteTest: (index) ->
     tests = @tests

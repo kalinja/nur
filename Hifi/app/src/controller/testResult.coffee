@@ -1,8 +1,8 @@
 class TestResultController
   constructor: (@$log, @TestService, @$routeParams, @$scope, @$location, @ResultService) ->
-    @$log.debug "constructing TestResultController"
+    @$log.debug "constructing TestResultController with @$routeParams.currentTest: #{@$routeParams.currentTest}"
     if (@$routeParams.currentTest)
-      @test = @TestService.getTest(@$routeParams.test)
+      @test = @TestService.getTest(@$routeParams.currentTest)
     else
       @test = @TestService.getTest("nazev-testovaciho-testu")
 
