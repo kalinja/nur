@@ -47,7 +47,7 @@ class TestService
             }
             ,
             {
-            type: "list-select",
+            type: "simple-select",
             text: "Hlavní město ČR?",
             answers:
               [

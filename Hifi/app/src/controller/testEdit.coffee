@@ -14,6 +14,12 @@ class TestEditController
     @registerOnEvents()
     @updateHiddenAnswers()
 
+  getQuestionTypeName: (type) ->
+    for qType in @questionTypes
+      if qType.type.localeCompare(type) == 0
+        return qType.name
+    return "Chyba"
+
   registerOnEvents: () ->
     thiz = this
     @$scope.test = @test
@@ -76,7 +82,7 @@ class TestEditController
   addSimpleAnswer: (idx) ->
     newAnswer = { "correct": false, "text": "" }
     if @test.questions[idx].answers.length == 0
-      newAnswer["correct"] = true
+      newAnswer.correct = true
     @$log.debug "newAnswer[correct]: #{newAnswer["correct"]}"
     @test.questions[idx].answers.push(newAnswer)
 
@@ -122,9 +128,36 @@ class TestEditController
     else
       @passwordButtonText = "Zrušit heslo"
 
+  checkTest: (test) ->
+    error = false
+    if test.name is undefined or test.name.length < 1
+      error = true
+    if test.questions.length < 1
+      error = true
+    for question in test.questions
+      @$log.debug "check question text: #{question.text}"
+      if question.text is undefined or question.text.length < 1
+        error = true
+      if question.answers is not null
+        if question.answers.length < 1
+          error = true
+        correct = false
+        for answer in question.answers
+          @$log.debug "check answer text: #{answer.text}"
+          if answer.correct
+            correct = true
+          if answer.text is undefined or answer.text.length < 1
+            error = true
+        if not correct
+          error = true
+    if error
+      window.alert("Nedokončený test!")
+    not error
+
   saveAndFinish: () ->
-    @TestService.save(@test)
-    @$location.path("/myTests")
+    if @checkTest(@test)
+      @TestService.save(@test)
+      @$location.path("/myTests")
 
   updateHiddenAnswers: () ->
     @hiddenAnswers.splice(0,@hiddenAnswers.length)

@@ -26,13 +26,13 @@
       <div class="clearfix"></div>
 
       <div class="well margin-top" ng-repeat="question in tec.test.questions">
-          <p style="font-size: 1.17em; font-weight: bold;">Otázka {{$index+1}}</p>
+          <p style="font-size: 1.17em; font-weight: bold;">{{$index+1}}. {{tec.getQuestionTypeName(question.type)}}</p>
           <textarea class="form-control description-input" rows="3" placeholder="Text otázky" ng-model="question.text"></textarea>
 
           <div ng-if="question.type == 'simple-select'">
             <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                 <span class="input-group-addon">
-                  <input type="radio" name="{{'radio' + prevIndex}}" ng-checked="answer.correct"></input>
+                  <input type="radio" name="{{'radio' + prevIndex}}" ng-checked="answer.correct"></input> Správná odpověď
                 </span>
                 <input type="text" class="form-control " placeholder="Odpověď" ng-model="answer.text"></input>
                 <span class="input-group-btn"><button class="btn btn-default" type="button" ng-click="tec.removeAnswer(question, answer)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Odebrat</button></span>
@@ -42,7 +42,7 @@
           <div ng-if="question.type == 'list-select'">
             <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                 <span class="input-group-addon">
-                  <input type="radio" name="{{'radio' + prevIndex}}"></input>
+                  <input type="radio" name="{{'radio' + prevIndex}}"></input> Správná odpověď
                 </span>
                 <input type="text" class="form-control " placeholder="Odpověď" ng-model="answer.text"></input>
                 <span class="input-group-btn"><button class="btn btn-default" type="button" ng-click="tec.removeAnswer(question, answer)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Odebrat</button></span>
@@ -52,7 +52,7 @@
           <div ng-if="question.type == 'multi-select'">
             <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                 <span class="input-group-addon">
-                  <input type="checkbox" name="{{'checkbox' + prevIndex}}" ng-checked="answer.correct"></input>
+                  <input type="checkbox" name="{{'checkbox' + prevIndex}}" ng-checked="answer.correct"></input> Správná odpověď
                 </span>
                 <input type="text" class="form-control " placeholder="Odpověď" ng-model="answer.text"></input>
                 <span class="input-group-btn"><button class="btn btn-default" type="button" ng-click="tec.removeAnswer(question, answer)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Odebrat</button></span>
