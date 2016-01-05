@@ -179,3 +179,13 @@ body {
     border-bottom: 0;
   }
 }
+
+.ok
+{
+  color: #5cb85c;
+}
+
+.fail
+{
+  color: #d9534f
+}

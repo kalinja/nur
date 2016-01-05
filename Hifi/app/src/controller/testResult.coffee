@@ -76,6 +76,15 @@ class TestResultController
         return "incorrect"
     return ""
 
+  multiselectStyle: (questionIndex, answeri) ->
+    @answers[questionIndex] != undefined && undefined!=@answers[questionIndex].values[answeri] && @test.questions[questionIndex].answers[answeri].correct==@answers[questionIndex].values[answeri]
+
+  correctBg: (questionIndex, answeri) ->
+    if(@test.questions[questionIndex].type == "multi-select" || @test.questions[questionIndex].type == "simple-select")
+      if(@test.questions[questionIndex].answers[answeri].correct == true)
+        return "correct"
+    return ""
+
   correctAnswerText: (questionIndex) ->
     for answer in @test.questions[questionIndex].answers
       if(answer.correct == true)

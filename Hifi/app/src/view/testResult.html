@@ -20,15 +20,19 @@
     <form class="form-horizontal">
         <div class="clearfix"></div>
         <div class="well margin-top" ng-repeat="question in tec.test.questions" ng-init="prevIndex = $index">
-            <div class="row"> <div class="col-md-9"></div><div class="col-md-3"><button type="button" class="btn btn-default form-control" ng-click="tec.showQuestionReport()">Nahlásit otázku</button></div></div>
+            <div class="row">
+                <div class="col-md-9"><h5 ng-if="tec.isCorrect($index)" class="ok"><span class="glyphicon glyphicon-ok-circle"></span>Správně</h5><h5 ng-if="!tec.isCorrect($index)" class="fail"><span class="glyphicon glyphicon-remove-circle"></span>Špatně</h5></div>
+                <div class="col-md-3"><button type="button" class="btn btn-default form-control" ng-click="tec.showQuestionReport()">Nahlásit otázku</button></div>
+            </div>
             <div class="form-control description margin-top"><span style="font-weight: bold">{{$index+1}}.</span>&nbsp;{{question.text}}</div>
             <div ng-if="question.type == 'simple-select'">
                 <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                 <span class="input-group-addon">
-                  <input type="radio" name="{{'answer' + prevIndex}}" id="{{'answer' + $index}}" disabled ng-checked="tec.answers[prevIndex].value == $index.toString()">
+                    <span class="glyphicon glyphicon-ok-circle ok" ng-if="tec.answers[prevIndex].value == $index.toString() && tec.isCorrect(prevIndex)"></span>
+                    <span class="glyphicon glyphicon-remove-circle fail" ng-if="tec.answers[prevIndex].value == $index.toString() && !tec.isCorrect(prevIndex)"></span>
+                    <span class="glyphicon glyphicon-remove-circle fail" ng-if="tec.answers[prevIndex].value != $index.toString()" style="visibility: hidden"></span>
                 </span>
-                    <label for="{{'answer' + $index}}" class="form-control {{tec.style(prevIndex,$index)}}">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
-
+                    <label for="{{'answer' + $index}}" class="form-control {{tec.correctBg(prevIndex,$index)}}">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
                 </div>
             </div>
             <div ng-if="question.type == 'list-select'">
@@ -51,10 +55,12 @@
             </div>
             <div ng-if="question.type == 'multi-select'">
                 <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
-                    <span class="input-group-addon">
-                        <input type="checkbox" name="{{'q' + '$prevIndex'+ 'a' + $index}}" id="{{'q' + '$prevIndex'+ 'a' + $index}}" disabled ng-checked="tec.answers[prevIndex].values[$index]">
-                    </span>
-                    <label for="{{'q' + '$prevIndex'+ 'a' + $index}}" class="form-control {{tec.style(prevIndex,$index)}}">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
+                    <span class="input-group-addon checkbox">
+                        <span class="glyphicon glyphicon-ok-circle ok" ng-if="tec.answers[prevIndex].values[$index] && tec.multiselectStyle(prevIndex,$index)"></span>
+                    <span class="glyphicon glyphicon-remove-circle fail" ng-if="tec.answers[prevIndex].values[$index] && !tec.multiselectStyle(prevIndex,$index)"></span>
+                    <span class="glyphicon glyphicon-remove-circle fail" ng-if="!tec.answers[prevIndex].values[$index]" style="visibility: hidden"></span>
+                   </span>
+                    <label class="form-control {{tec.correctBg(prevIndex,$index)}}">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
 
                 </div>
             </div>
@@ -72,4 +78,16 @@
         </div>
         <div class="clearfix"></div>
     </form>
+    <div class="row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6" style="padding-bottom: 19px;">
+            <div class="form-inline pull-right">
+                <button type="button" class="btn btn-default form-control" ng-click="tec.closeTest()">Zavřít test</button>
+                <button type="button" class="btn btn-default form-control" ng-click="tec.repeatTest()">Spustit znovu</button>
+                <button id="dislikebtn" title="Ohodnotit test" type="button" class="btn btn-default form-control glyphicon glyphicon-thumbs-down" ng-click="tec.dislike()"></button>
+                <button id="likebtn" title="Ohodnotit test" type="button" class="btn btn-default form-control glyphicon glyphicon-thumbs-up" ng-click="tec.like()"></button>
+            </div>
+        </div>
+    </div>
 </div>
