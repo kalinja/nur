@@ -80,6 +80,10 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .mySuperMargingSaveButtonToooFuckingClose {
   margin-left: 10px !important;
 }
@@ -87,6 +91,10 @@ body {
 .loginMargin {
   margin-left: 10px !important;
   margin-top: 0px !important;
+}
+
+.arrowMargin {
+  margin-left: 20px;
 }
 
 

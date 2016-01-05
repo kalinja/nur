@@ -5,13 +5,11 @@
         <button type="button" class="btn btn-default " ng-click="hc.clearAllHistory()">{{hc.clearAllBtnText}}</button>
     </div>
     <div class="panel panel-default" ng-repeat="test in hc.tests" id="test{{$index}}">
-        <div class="panel-heading row rowHistory">
+        <div ng-click="isCollapsed = !isCollapsed" class="panel-heading row rowHistory pointer" title="Zobrazit více">
             <h4 class="panel-title col-sm-12">
-                <a href ng-click="isCollapsed = !isCollapsed">{{test.name}}</a>
-                <a href ng-click="isCollapsed = !isCollapsed"  title="Zobrazit vice" class="pull-right mysupermargingsavebuttontooofuckingclose">
-                    <span ng-if="isCollapsed" class="glyphicon glyphicon-arrow-up"></span>
-                    <span ng-if="!isCollapsed" class="glyphicon glyphicon-arrow-down"></span>
-                </a>
+                {{test.name}}
+                <span ng-if="isCollapsed" class="glyphicon glyphicon-arrow-up pull-right arrowMargin"></span>
+                <span ng-if="!isCollapsed" class="glyphicon glyphicon-arrow-down pull-right arrowMargin"></span>
                 <span class="pull-right">Úspěšnost: {{test.rating}}%</span>
             </h4>
 
