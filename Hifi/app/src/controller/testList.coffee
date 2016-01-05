@@ -27,6 +27,7 @@ class TestListController
       for tagSearch in tags
         found = false
         for tag in test.tags
+          @$log.debug "toDashedName(#{tag} toDashedName(#{tagSearch}))"
           if toDashedName(tag).localeCompare(toDashedName(tagSearch)) == 0
             found = true
             break

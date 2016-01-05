@@ -166,8 +166,18 @@ class TestEditController
 
   saveAndFinish: () ->
     if @checkTest(@test)
+      tags = []
+      for tag in @test.tags
+        if typeof tag is 'string'
+          tags.push(tag)
+        else
+          if tag["text"] != null
+            tags.push(tag["text"])
+      @test.tags = tags
+      @$log.debug "@test.tags: #{@test.tags}"
       @TestService.save(@test)
       @$location.path("/myTests")
+
 
   toggleRadio: (question, answer) ->
     for otherAnswer in question.answers
