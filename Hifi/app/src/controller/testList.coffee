@@ -12,18 +12,26 @@ class TestListController
       thiz.updateByTags(args)
     )
 
-  updateByTags: (tags) ->
+  updateByTags: (tagsSrc) ->
     @$log.debug "updateByTags"
     @tests.length = 0
+    tags = []
+    for tag in tagsSrc
+      if typeof tag is 'string'
+        tags.push(tag)
+      else
+        if tag["text"] != null
+          tags.push(tag["text"])
     for test in @TestService.getTests()
-      @$log.debug "tags.length: #{tags.length}"
-      found = tags.length == 0
-      for tag in test.tags
-        for tagSearch in tags
-          if toDashedName(tag).localeCompare(toDashedName(tagSearch["text"])) == 0
+      foundAll = true
+      for tagSearch in tags
+        found = false
+        for tag in test.tags
+          if toDashedName(tag).localeCompare(toDashedName(tagSearch)) == 0
             found = true
             break
-      if found
+        foundAll = foundAll and found
+      if foundAll
         @tests.push(test)
 
   runTest: (test) ->

@@ -58,7 +58,12 @@ class HeaderController
           @$log.debug("tag:#{tag["text"]}")
           if tag["text"] != null
             tags.push(tag["text"])
-    tags.unique()
+    resTags = []
+    tags = tags.sort().unique()
+    for tag in tags
+      if tag.substr(0, query.length).toUpperCase() == query.toUpperCase()
+        resTags.push(tag)
+    resTags
 
   toggled: (open) ->
     @$log.log('Dropdown is now: ', open);
