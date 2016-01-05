@@ -133,11 +133,13 @@ class TestService
     copyOfTests
 
   getTest: (id) ->
-    @$log.log("Hello")
+    @$log.log("get test id: #{id}")
     for test in @tests
       if test.id.localeCompare(id) == 0
+        @$log.log("returning existing test")
         return @clone(test)
-    null
+    @$log.log("Creating new test")
+    @newTest()
 
   getTestNoClone: (id) ->
     @$log.log("Hello")
@@ -148,9 +150,10 @@ class TestService
 
   save: (test) ->
     idx = @tests.indexOf(@getTestNoClone(test.id))
-    @$log.log("id: #{test.id} idx: #{idx} @getTest(test.id): #{@getTest(test.id)}")
+    @$log.log("id: #{test.id} idx: #{idx} @getTestNoClone(test.id): #{@getTestNoClone(test.id)}")
     if idx == -1
       test.id = toDashedName(test.name)
+      @$log.log("new id: #{test.id}")
       @tests.push(test)
     else
       @tests[idx] = test
