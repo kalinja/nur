@@ -41,6 +41,10 @@
     margin-top: 1em;
 }
 
+.margin-bottom {
+    margin-bottom : 1em;
+}
+
 body {
   padding-top: 90px;
   padding-bottom: 20px;

@@ -1,6 +1,7 @@
-
+<div ng-controller="TestEditController as tec" ng-init="tec.onInit()" ng-model="tec.test" ng-change="tec.onChange()">
   <h3>Editace testu</h3>
-  <div class="well" ng-controller="TestEditController as tec" ng-init="tec.onInit()" ng-model="tec.test" ng-change="tec.onChange()">
+  <button type="button" class="btn btn-default margin-bottom" ng-click="tec.saveAndFinish()">Uložit a dokončit</button>
+  <div class="well">
     <form class="form-horizontal">
       <div class="form-inline">
           <input type="text" class="form-control input-sm test-name-input" placeholder="Název Testu" ng-model="test.name">
@@ -13,7 +14,7 @@
               <button type="button" class="btn btn-default form-control" ng-click="tec.passwordButtonClick()">{{tec.passwordButtonText}}</button>
           </div>
           <div class="form-group difficulty-input">
-              <label for="select" style="font-weight: normal;">Obtížnost: {{tec.test.difficulty == 3}}</label>
+              <label for="select" style="font-weight: normal;">Obtížnost: </label>
               <select id="select" class="form-control input-sm" ng-model="tec.selectedDifficulty" ng-options="option as option for option in tec.difficulties" ng-change="tec.updateDifficulty()">
               </select>
           </div>
@@ -84,3 +85,4 @@
       <button type="button" class="btn btn-default margin-top" ng-click="tec.saveAndFinish()">Uložit a dokončit</button>
     </form>
   </div>
+</div>
