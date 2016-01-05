@@ -119,20 +119,20 @@ class TestResultController
     )
 
   like: ()->
-    if($('#likebtn').hasClass('btn-primary'))
-      $('#likebtn').removeClass('btn-primary')
+    if($('button[name=likebtn]').hasClass('btn-primary'))
+      $('button[name=likebtn]').removeClass('btn-primary')
     else
-      $('#likebtn').addClass('btn-primary')
-      if($('#dislikebtn').hasClass('btn-primary'))
-        $('#dislikebtn').removeClass('btn-primary')
+      $('button[name=likebtn]').addClass('btn-primary')
+      if($('button[name=dislikebtn]').hasClass('btn-primary'))
+        $('button[name=dislikebtn]').removeClass('btn-primary')
 
   dislike: ()->
-    if($('#dislikebtn').hasClass('btn-primary'))
-      $('#dislikebtn').removeClass('btn-primary')
+    if($('button[name=dislikebtn]').hasClass('btn-primary'))
+      $('button[name=dislikebtn]').removeClass('btn-primary')
     else
-      $('#dislikebtn').addClass('btn-primary')
-      if($('#likebtn').hasClass('btn-primary'))
-        $('#likebtn').removeClass('btn-primary')
+      $('button[name=dislikebtn]').addClass('btn-primary')
+      if($('button[name=likebtn]').hasClass('btn-primary'))
+        $('button[name=likebtn]').removeClass('btn-primary')
 
   showQuestionReport: ()->
     BootstrapDialog.show(
