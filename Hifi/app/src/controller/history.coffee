@@ -6,7 +6,7 @@ class HistoryController
     @clearAllBtnText = "Smazat celou historii"
     @editBtnText = "Editovat"
     @deleteBtnText = "Smazat"
-    @correctAnswersBtnText = "Spravne vysledky"
+    @correctAnswersBtnText = "Spravne odpovedi"
     @result = @ResultService
     location = @$location
     @$scope.$on('filterByTags', (event, args) ->
