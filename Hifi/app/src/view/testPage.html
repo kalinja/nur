@@ -22,9 +22,9 @@
             <div ng-if="question.type == 'simple-select'">
                 <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                 <span class="input-group-addon">
-                  <input type="radio" name="{{'answer' + prevIndex}}" id="{{'answer' + $index}}" ng-model="tec.answers[prevIndex].value" value="{{$index}}" ng-change="tec.countAnswers()">
+                  <input type="radio" name="{{'answer' + prevIndex}}" id="{{'answer' + $index + prevIndex}}" ng-model="tec.answers[prevIndex].value" value="{{$index}}" ng-change="tec.countAnswers()">
                 </span>
-                    <label for="{{'answer' + $index}}" class="form-control ">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
+                    <label for="{{'answer' + $index + prevIndex}}" class="form-control ">{{tec.answerLetter($index)}})&nbsp;{{answer.text}}</label>
 
                 </div>
             </div>
