@@ -27,12 +27,12 @@
 
       <div class="well margin-top" ng-repeat="question in tec.test.questions">
           <p style="font-size: 1.17em; font-weight: bold;">{{$index+1}}. {{tec.getQuestionTypeName(question.type)}}</p>
-          <textarea class="form-control description-input" rows="3" placeholder="Text otázky" ng-model="question.text"></textarea>
+          <textarea class="form-control description-input" rows="3" placeholder="Text otázky" ng-model="question.text" ng-init="prevIndex = $index"></textarea>
 
           <div ng-if="question.type == 'simple-select'">
             <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                 <span class="input-group-addon">
-                  <input type="radio" name="{{'radio' + prevIndex}}" ng-checked="answer.correct"></input> Správná odpověď
+                  <input type="radio" name="{{'radio' + prevIndex}}" ng-checked="answer.correct" ng-click="tec.toggleRadio(question, answer)"></input> Správná odpověď
                 </span>
                 <input type="text" class="form-control " placeholder="Odpověď" ng-model="answer.text"></input>
                 <span class="input-group-btn"><button class="btn btn-default" type="button" ng-click="tec.removeAnswer(question, answer)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Odebrat</button></span>
@@ -52,7 +52,7 @@
           <div ng-if="question.type == 'multi-select'">
             <div class="input-group margin-top question-input" ng-repeat="answer in question.answers">
                 <span class="input-group-addon">
-                  <input type="checkbox" name="{{'checkbox' + prevIndex}}" ng-checked="answer.correct"></input> Správná odpověď
+                  <input type="checkbox" name="{{'checkbox' + prevIndex}}" ng-model="answer.checked" ng-click="tec.toggleCheckBox(question, answer)"></input> Správná odpověď
                 </span>
                 <input type="text" class="form-control " placeholder="Odpověď" ng-model="answer.text"></input>
                 <span class="input-group-btn"><button class="btn btn-default" type="button" ng-click="tec.removeAnswer(question, answer)"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Odebrat</button></span>

@@ -130,34 +130,53 @@ class TestEditController
 
   checkTest: (test) ->
     error = false
+    errorMsgPre = "Nedokončený test:\n"
+    errorMsg = ""
     if test.name is undefined or test.name.length < 1
       error = true
+      errorMsg += "Prázdné jméno testu!\n"
     if test.questions.length < 1
       error = true
+      errorMsg += "Žádná otázka!\n"
     for question in test.questions
       @$log.debug "check question text: #{question.text}"
       if question.text is undefined or question.text.length < 1
         error = true
-      if question.answers is not null
+        errorMsg += "Otázka bez textu!\n"
+      @$log.debug "check question.answers: #{question.answers}"
+      if question.answers
         if question.answers.length < 1
           error = true
+          errorMsg += "Otázka bez odpovědí!\n"
         correct = false
         for answer in question.answers
           @$log.debug "check answer text: #{answer.text}"
+          @$log.debug "check answer correct: #{answer.correct}"
           if answer.correct
             correct = true
           if answer.text is undefined or answer.text.length < 1
             error = true
+            errorMsg += "Prázdná odpověď!\n"
         if not correct
           error = true
+          errorMsg += "Žádná správná odpověd!\n"
     if error
-      window.alert("Nedokončený test!")
+      window.alert(errorMsgPre + errorMsg)
     not error
 
   saveAndFinish: () ->
     if @checkTest(@test)
       @TestService.save(@test)
       @$location.path("/myTests")
+
+  toggleRadio: (question, answer) ->
+    for otherAnswer in question.answers
+      if otherAnswer.correct
+        otherAnswer.correct = false
+    answer.correct = true
+
+  toggleCheckBox: (question, answer) ->
+    answer.correct = !answer.correct
 
   updateHiddenAnswers: () ->
     @hiddenAnswers.splice(0,@hiddenAnswers.length)
